@@ -4,7 +4,7 @@ Projekt ma na celu zasymulowanie ruchu tramwajowego, bazując na uproszczonej <b
 
 ## Poruszanie się tramwajów
 
-<i><b>Tramwaje</b> będą poruszały się po określonej <b>trasie(lini tramwajowej)</b> od <b>przystanku</b> A do B, a potem od <b>przystanku</b> B do A itd. dopóki symulacja się nie zakończy. Każdy <b>tramwaj</b> będzie miał taką samą prędkość. Z <b>przystanków</b> bedą zabierały tyle <b>pasażerów</b> ile są wstanie zmieścić. Jeżeli nie będzie miejsca dla części <b>pasażerów</b> zostaną oni odrzuceni losowo i bedą musieli czekać na następny <b>tramwaj</b>. Jeżeli <b>tramwaje</b> spotkają się na złączeniu dwóch <b>torów</b>, jeden wybrany losowo będzie musiał poczekać na przejazd drugiego, choć będzie też istniała mała szansa, że się zderzą. W jednym <b>sektorze</b> bedą mogły się poruszać dwa <b>tramwaje</b>, jeżeli jadą w przeciwnych kierunkach.</i>
+<i><b>Tramwaje</b> będą poruszały się po określonej <b>trasie(lini tramwajowej)</b> od <b>przystanku</b> A do B, a potem od <b>przystanku</b> B do A itd. dopóki symulacja się nie zakończy. Każdy <b>tramwaj</b> będzie miał taką samą prędkość. Z <b>przystanków</b> bedą zabierały tyle <b>pasażerów</b> ile są wstanie zmieścić. Jeżeli nie będzie miejsca dla części <b>pasażerów</b> zostaną oni odrzuceni losowo i bedą musieli czekać na następny <b>tramwaj</b>. Jeżeli <b>tramwaj</b> będzie chciał przenieść się na <b>sektor</b>, który jest już zapełniony, będzie musiał poczekać, aż ten <b>sektor</b> się zwolni</i>
 
 ## Zachowanie pasażerów
 
