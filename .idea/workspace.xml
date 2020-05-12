@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4ca4be6-a5d1-49b2-b772-a04e152efdc9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analiza_czasownikowo_rzeczownikowa.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/analiza_czasownikowo_rzeczownikowa.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram_UC.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/diagram_UC.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram_klas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/diagram_klas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagramy_aktywności.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/diagramy_aktywności.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/karty_crc.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/karty_crc.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +34,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="tram_simulation" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="tram_simulation" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="tram_simulation" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="tram_simulation" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="documentation" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="tram_simulation" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="help" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -110,7 +71,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
   <component name="RunManager" selected="Gradle.tram_simulation [compileJava]">
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -252,9 +213,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.tram_simulation [build]" />
         <item itemvalue="Gradle.tram_simulation [tasks]" />
         <item itemvalue="Gradle.tram_simulation [init]" />
-        <item itemvalue="Gradle.tram_simulation [build]" />
         <item itemvalue="Gradle.tram_simulation [compileJava]" />
         <item itemvalue="Gradle.tram_simulation [buildEnvironment]" />
       </list>
@@ -274,37 +235,37 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589196292125">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589270913393">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1589196292125" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1589270913393" />
     <state x="655" y="241" width="666" height="623" key="#tram_simulation_[buildEnvironment]" timestamp="1589196475771">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="655" y="241" width="666" height="623" key="#tram_simulation_[buildEnvironment]/67.27.1853.1053@67.27.1853.1053" timestamp="1589196475771" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1589197088736">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1589274880807">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1589197088736" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1589197088735">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1589274880807" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1589274880805">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1589197088735" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1589197088735">
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1589274880805" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1589274880804">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1589197088735" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1589197088735">
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1589274880804" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1589274880806">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1589197088735" />
-    <state x="482" y="187" key="SettingsEditor" timestamp="1589196548103">
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1589274880806" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1589270927541">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1589196548103" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1589196493878">
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1589270927541" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1589270923404">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1589196493878" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1589270923403" />
   </component>
 </project>
