@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalTime;
 
@@ -5,12 +6,11 @@ import java.time.LocalTime;
  * Main class that handles the simulation
  */
 public class Simulation {
-     // Musimy wpierw zaimplementować klasy Tram, Sector, RandomEvent
-     // zanim zaczniemy implementację przeprowadzenia symulacji
 
-    // private List<Tram> all_trams = new ArrayList<Tram>();
-    // private List<Sector> all_sectors = new ArrayList<Sector>();
-    // private List<RandomEvent> all_possible_events = new ArrayList<RandomEvent>();
+    private List<Tram> all_trams = new ArrayList<Tram>();
+    private List<Sector> all_sectors = new ArrayList<Sector>();
+    private List<Sector> sectors_to_repair = new ArrayList<>();
+    private List<RandomEvent> all_possible_events = new ArrayList<RandomEvent>();
     private LocalTime time;
 
     /**
@@ -53,7 +53,23 @@ public class Simulation {
      * Resolve move function on all trams
      */
     private void move_trams(){
-        System.out.println("move trams");
+        for(int i = 0; i < all_trams.size(); i++){
+            all_trams.get(i).make_move();
+        }
+    }
+
+    /**
+     * Repair all inactive sectors
+     */
+    private void repair_sectors(){
+        if(sectors_to_repair != null){
+            Sector sector;
+            for(int i = sectors_to_repair.size()-1; i >= 0; i--){
+                sector = sectors_to_repair.get(i);
+                sector.repair();
+                if(sector.is_active){ sectors_to_repair.remove(i); }
+            }
+        }
     }
 
     /**
@@ -67,6 +83,7 @@ public class Simulation {
             resolve_random_events();
             spawn_passengers();
             move_trams();
+            repair_sectors();
             time = time.plusMinutes(1);
         }
     }
