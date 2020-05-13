@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tram extends Repairable {
-    private Sector sector_on;
+    public Sector sector_on;
     private Tramline tramline;
     private List<Passenger> passengers_on = new ArrayList<>();
     private int direction; // 0 - previous sector on list, 1 - next sector ob list

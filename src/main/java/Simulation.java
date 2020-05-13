@@ -11,19 +11,32 @@ public class Simulation {
     private List<Sector> all_sectors = new ArrayList<Sector>();
     private List<Sector> sectors_to_repair = new ArrayList<>();
     private List<RandomEvent> all_possible_events = new ArrayList<RandomEvent>();
+    public Tramlines stan= new Tramlines();
     private LocalTime time;
 
     /**
      * Set sectors based on prepared map
      */
     private void set_sectors(){
+
+
         System.out.println("set sectors");
+    }
+    /**
+     * Set stops based on prepared map
+     */
+    private void set_stops(){
+
+        System.out.println("set stops");
     }
 
     /**
      * Set tramlines based on prepared schedule
      */
     private void set_tramlines(){
+
+
+
         System.out.println("set tramlines");
     }
 
@@ -46,6 +59,8 @@ public class Simulation {
      * Spawn passengers on trams based on time
      */
     private void spawn_passengers() {
+
+
         System.out.println("spawn passengers");
     }
 
@@ -95,6 +110,7 @@ public class Simulation {
     private Simulation(){
         time = LocalTime.of(5, 0, 0);
         set_sectors();
+        set_stops();
         set_tramlines();
         spawn_trams();
         simulate();
