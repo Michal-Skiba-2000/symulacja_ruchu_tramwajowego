@@ -1,3 +1,4 @@
+import java.math.RoundingMode;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,15 +13,17 @@ import java.nio.file.Paths;
 /**
   Main class that handles the simulation
 */
-public class Simulation {
+public class  Simulation {
 
     private List<Tram> all_trams = new ArrayList<Tram>();
     private List<Sector> all_sectors = new ArrayList<Sector>();
     private List<Sector> sectors_to_repair = new ArrayList<>();
     private List<RandomEvent> all_possible_events = new ArrayList<RandomEvent>();
     private List<Tramline> all_tramlines = new ArrayList<>();
-    public Tramlines stan= new Tramlines();
+    private List<Passenger> all_passengers = new ArrayList<>();
+    private List<Stop> all_stops = new ArrayList<>();
     private LocalTime time;
+    private RandomEvent event;
 
     /**
      * Set sectors with stops based on prepared map
@@ -43,6 +46,8 @@ public class Simulation {
             sector = new Sector(capacity, stop);
             stop.addSector(sector);
             all_sectors.add(sector);
+            if(stop_name!="null") all_stops.add(stop);
+
         }
         int sec_index;
         for(int i = 0; i < arr.length(); i++){
@@ -99,14 +104,22 @@ public class Simulation {
      * and if any happen set event to tram or sector
      */
     private void resolve_random_events(){
-        System.out.println("resolve random events");
+        int i= (int) Math.round(Math.random()*1000)%100;
+        if(i< event.probability) {
+            i=(int) (Math.round(Math.random()*1000)%all_sectors.size());
+            all_sectors.get(i).random_event=event;
+            sectors_to_repair.add(all_sectors.get(i));
+        }
+
     }
 
     /**
      * Spawn passengers on trams based on time
      */
     private void spawn_passengers() {
-        System.out.println("spawn passengers");
+        int start= (int) (Math.round(Math.random()*1000)% all_stops.size());
+        Passenger passenger = new Passenger(all_stops.get(start), all_stops);
+        all_passengers.add(passenger);
     }
 
     /**
@@ -157,6 +170,9 @@ public class Simulation {
         set_sectors();
         set_tramlines();
         spawn_trams();
+        int a=1;
+        double b=20;
+        event= new RandomEvent(a,b);
         simulate();
     }
 
