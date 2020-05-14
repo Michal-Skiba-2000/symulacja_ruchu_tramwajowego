@@ -73,13 +73,17 @@ public class Tram extends Repairable {
     public void make_move(){
         Sector move_on_sector = get_sector_to_move_on();
         if( !check_if_active(move_on_sector) ){ return; }
-        if( !move_on_sector.has_space() ){ return; }
+        if( !move_on_sector.has_space(direction) ){ return; }
         sector_on = move_on_sector;
         if( sector_on.has_stop() ){
             Stop stop = sector_on.stop;
             leave_passengers(stop);
             load_passengers(stop);
         }
+    }
+
+    public int get_direction(){
+        return direction;
     }
 
     public Tram(Tramline tramline, int direction){

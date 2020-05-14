@@ -1,0 +1,219 @@
+[{
+  "id": 1,
+  "connected": [
+    2
+  ],
+  "capacity": 1,
+  "stop": "Transbud"
+},
+{
+"id": 2,
+"connected": [1, 3],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 3,
+"connected": [2, 4],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 4,
+"connected": [3, 5],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 5,
+"connected": [4, 6],
+"capacity": 1,
+"stop": "Nyska"
+},
+{
+"id": 6,
+"connected": [5, 7],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 7,
+"connected": [6, 8],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 8,
+"connected": [7, 9],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 9,
+"connected": [8, 10],
+"capacity": 1,
+"stop": "Bardzka"
+},
+{
+"id": 10,
+"connected": [9, 11],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 11,
+"connected": [10, 12],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 12,
+"connected": [11, 13],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 13,
+"connected": [12, 14],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 14,
+"connected": [13, 15],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 15,
+"connected": [14, 16],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 16,
+"connected": [15, 17],
+"capacity": 1,
+"stop": "Kamienna"
+},
+{
+"id": 17,
+"connected": [16, 18],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 18,
+"connected": [17, 19],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 19,
+"connected": [18, 20],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 20,
+"connected": [19, 21],
+"capacity": 1,
+"stop": "Prudnicka"
+},
+{
+"id": 21,
+"connected": [20, 22],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 22,
+"connected": [21, 23],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 23,
+"connected": [22, 24],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 24,
+"connected": [23, 25],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 25,
+"connected": [24, 26],
+"capacity": 1,
+"stop": "Huby"
+},
+{
+"id": 26,
+"connected": [25, 27],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 27,
+"connected": [26, 28],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 28,
+"connected": [27, 29],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 29,
+"connected": [28, 30],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 30,
+"connected": [29, 31],
+"capacity": 1,
+"stop": "Kosciuszki"
+},
+{
+"id": 31,
+"connected": [30, 32],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 32,
+"connected": [31, 33],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 33,
+"connected": [32, 34],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 34,
+"connected": [33, 35],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 35,
+"connected": [34, 36],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 36,
+"connected": [35],
+"capacity": 1,
+"stop": "Komuny paryskiej"
+}
+]

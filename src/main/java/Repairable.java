@@ -4,24 +4,24 @@ public abstract class Repairable {
     protected boolean is_active;
 
     public void repair(){
-        if(is_active == true ){ return; }
-        if (random_event != null){
-            time_to_repair += random_event.duration;
-            random_event = null;
+        if(this.is_active == true ){ return; }
+        if (this.random_event != null){
+            this.time_to_repair += random_event.duration;
+            this.random_event = null;
         }
-        time_to_repair -= 1;
-        if (time_to_repair == 0){
-            is_active = true;
+        this.time_to_repair -= 1;
+        if (this.time_to_repair == 0){
+            this.is_active = true;
         }
     }
 
     public void assign_event(RandomEvent event){
-        random_event = event;
-        is_active = false;
+        this.random_event = event;
+        this.is_active = false;
     }
 
     protected Repairable(){
-        is_active = true;
-        time_to_repair = 0;
+        this.is_active = true;
+        this.time_to_repair = 0;
     }
 }

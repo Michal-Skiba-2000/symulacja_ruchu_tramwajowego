@@ -7,19 +7,28 @@ public class Sector extends Repairable {
     public List<Sector> connected_sectors = new ArrayList<>();
     private int capacity;
 
-    public boolean has_space() {
-        if(trams_on.size() < capacity) { return true; }
+    public boolean has_space(int direction) {
+        int count = 0;
+        for(int i = 0; i < trams_on.size(); i++){
+            if( trams_on.get(i).get_direction() == direction ){
+                count++;
+            }
+        }
+        if(count < capacity) { return true; }
         else { return false; }
     }
 
     public boolean has_stop(){
-        if( stop != null ) { return  true; }
+        if( this.stop != null ) { return  true; }
         else { return false; }
     }
 
-    public Sector(Stop stop, List<Sector> connected, int capacity){
+    public Sector(int capacity, Stop stop){
         this.stop = stop;
-        this.connected_sectors = connected;
+        this.capacity = capacity;
+    }
+
+    public Sector(int capacity){
         this.capacity = capacity;
     }
 }
