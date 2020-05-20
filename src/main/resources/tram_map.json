@@ -1,10 +1,8 @@
 [{
   "id": 1,
-  "connected": [
-    2
-  ],
+  "connected": [2],
   "capacity": 1,
-  "stop": "Transbud"
+  "stop": null
 },
 {
 "id": 2,
@@ -28,7 +26,7 @@
 "id": 5,
 "connected": [4, 6],
 "capacity": 1,
-"stop": "Nyska"
+"stop": null
 },
 {
 "id": 6,
@@ -52,7 +50,7 @@
 "id": 9,
 "connected": [8, 10],
 "capacity": 1,
-"stop": "Bardzka"
+"stop": null
 },
 {
 "id": 10,
@@ -94,7 +92,7 @@
 "id": 16,
 "connected": [15, 17],
 "capacity": 1,
-"stop": "Kamienna"
+"stop": null
 },
 {
 "id": 17,
@@ -118,11 +116,11 @@
 "id": 20,
 "connected": [19, 21],
 "capacity": 1,
-"stop": "Prudnicka"
+"stop": null
 },
 {
 "id": 21,
-"connected": [20, 22],
+"connected": [20, 22,29,272],
 "capacity": 1,
 "stop": null
 },
@@ -148,7 +146,7 @@
 "id": 25,
 "connected": [24, 26],
 "capacity": 1,
-"stop": "Huby"
+"stop": null
 },
 {
 "id": 26,
@@ -164,13 +162,13 @@
 },
 {
 "id": 28,
-"connected": [27, 29],
+"connected": [27,42] ,
 "capacity": 1,
 "stop": null
 },
 {
 "id": 29,
-"connected": [28, 30],
+"connected": [21, 30],
 "capacity": 1,
 "stop": null
 },
@@ -178,7 +176,7 @@
 "id": 30,
 "connected": [29, 31],
 "capacity": 1,
-"stop": "Kosciuszki"
+"stop": null
 },
 {
 "id": 31,
@@ -200,7 +198,7 @@
 },
 {
 "id": 34,
-"connected": [33, 35],
+"connected": [33, 35,264,132],
 "capacity": 1,
 "stop": null
 },
@@ -212,8 +210,1784 @@
 },
 {
 "id": 36,
-"connected": [35],
+"connected": [35,37],
 "capacity": 1,
-"stop": "Komuny paryskiej"
+"stop": null
+},
+{
+"id": 37,
+"connected": [36, 38],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 38,
+"connected": [37,39],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 39,
+"connected": [38, 40],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 40,
+"connected": [39,41],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 41,
+"connected": [40,42],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 42,
+"connected": [28,41,44,43],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 43,
+"connected": [42,47],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 44,
+"connected": [42,45],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 45,
+"connected": [44,46],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 46,
+"connected": [45,50,51],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 47,
+"connected": [43,48,67,93,83],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 48,
+"connected": [47,49],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 49,
+"connected": [48,50],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 50,
+"connected": [49,46],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 51,
+"connected": [46,52],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 52,
+"connected": [51,53],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 53,
+"connected": [52,54],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 54,
+"connected": [53,55],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 55,
+"connected": [54,56],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 56,
+"connected": [55,57],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 57,
+"connected": [56,58],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 58,
+"connected": [57,59],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 59,
+"connected": [58,60],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 60,
+"connected": [59,61],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 61,
+"connected": [60,62],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 62,
+"connected": [61,63],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 63,
+"connected": [62,64],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 64,
+"connected": [63,65],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 65,
+"connected": [64,66],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 66,
+"connected": [65],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 67,
+"connected": [47,68],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 68,
+"connected": [67,69],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 69,
+"connected": [68,70],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 70,
+"connected": [69,71],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 71,
+"connected": [70,72],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 72,
+"connected": [71,73],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 73,
+"connected": [72,74],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 74,
+"connected": [73,75],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 75,
+"connected": [74,76],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 76,
+"connected": [75,77],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 77,
+"connected": [76,78],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 78,
+"connected": [77,79],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 79,
+"connected": [78,80],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 80,
+"connected": [79,81],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 81,
+"connected": [80,82],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 82,
+"connected": [81],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 83,
+"connected": [47,84],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 84,
+"connected": [83,85],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 85,
+"connected": [84,86],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 86,
+"connected": [85,87],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 87,
+"connected": [86,88],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 88,
+"connected": [87,89],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 89,
+"connected": [88,94],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 90,
+"connected": [91,94],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 91,
+"connected": [90,92],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 92,
+"connected": [91,93],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 93,
+"connected": [92,47],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 94,
+"connected": [89,90,95,96],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 95,
+"connected": [94,100],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 96,
+"connected": [94,97],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 97,
+"connected": [96,98,99],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 98,
+"connected": [97,138],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 99,
+"connected": [97,100],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 100,
+"connected": [99,95,101,121],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 101,
+"connected": [100,102],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 102,
+"connected": [101,103],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 103,
+"connected": [102,104],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 104,
+"connected": [103,105],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 105,
+"connected": [104,106],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 106,
+"connected": [105,107],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 107,
+"connected": [106,108],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 108,
+"connected": [107,109],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 109,
+"connected": [108,110],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 110,
+"connected": [109,111],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 111,
+"connected": [110,112],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 112,
+"connected": [111,113],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 113,
+"connected": [112,114],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 114,
+"connected": [113,115],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 115,
+"connected": [114,116],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 116,
+"connected": [115,117],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 117,
+"connected": [116,118],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 118,
+"connected": [117,119],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 119,
+"connected": [118,120],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 120,
+"connected": [119],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 121,
+"connected": [100,122],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 122,
+"connected": [121,123],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 123,
+"connected": [122,124],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 124,
+"connected": [123,125],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 125,
+"connected": [124,126],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 126,
+"connected": [125,127],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 127,
+"connected": [126,128],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 128,
+"connected": [127,129],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 129,
+"connected": [128,130],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 130,
+"connected": [129,131],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 131,
+"connected": [130,143],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 132,
+"connected": [34,133],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 133,
+"connected": [132,134],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 134,
+"connected": [134,135],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 135,
+"connected": [134,136],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 136,
+"connected": [135,137],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 137,
+"connected": [136,138],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 138,
+"connected": [137,98,139,252],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 139,
+"connected": [138,140],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 140,
+"connected": [139,141],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 141,
+"connected": [140,142],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 142,
+"connected": [141,143],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 143,
+"connected": [142,131,144,188],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 144,
+"connected": [143,145],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 145,
+"connected": [144,146],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 146,
+"connected": [145,147],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 147,
+"connected": [146,148,174],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 148,
+"connected": [147,149],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 149,
+"connected": [148,150],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 150,
+"connected": [149,151],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 151,
+"connected": [150,152],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 152,
+"connected": [151,153],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 153,
+"connected": [152,154],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 154,
+"connected": [153,155],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 155,
+"connected": [154,156],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 156,
+"connected": [155,157],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 157,
+"connected": [166,158,156],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 158,
+"connected": [157,159],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 159,
+"connected": [158,160],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 160,
+"connected": [159,161],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 161,
+"connected": [160,162],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 162,
+"connected": [161,163],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 163,
+"connected": [162,164],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 164,
+"connected": [163,165],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 165,
+"connected": [164],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 166,
+"connected": [157,167],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 167,
+"connected": [166,168],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 168,
+"connected": [167,169],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 169,
+"connected": [168,170],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 170,
+"connected": [169,171],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 171,
+"connected": [170,172],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 172,
+"connected": [171,173],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 173,
+"connected": [172],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 174,
+"connected": [147,175],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 175,
+"connected": [174,176],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 176,
+"connected": [175,177],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 177,
+"connected": [176,178],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 178,
+"connected": [177,179],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 179,
+"connected": [178,180],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 180,
+"connected": [179,181],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 181,
+"connected": [180,182],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 182,
+"connected": [181,183],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 183,
+"connected": [182,184],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 184,
+"connected": [183,185],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 185,
+"connected": [184,186],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 186,
+"connected": [185,187],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 187,
+"connected": [186],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 188,
+"connected": [143,189],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 189,
+"connected": [188,190],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 190,
+"connected": [189,191],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 191,
+"connected": [190,192],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 192,
+"connected": [191,193,339,240],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 193,
+"connected": [192,194],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 194,
+"connected": [194,195],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 195,
+"connected": [194,196],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 196,
+"connected": [195,197],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 197,
+"connected": [196,198],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 198,
+"connected": [197.199],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 199,
+"connected": [198,200],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 200,
+"connected": [199,201],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 201,
+"connected": [200,202],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 202,
+"connected": [301,203],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 203,
+"connected": [202,204],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 204,
+"connected": [203,205],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 205,
+"connected": [204,206],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 206,
+"connected": [207,213,205],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 207,
+"connected": [206,208],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 208,
+"connected": [207,209],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 209,
+"connected": [208,210],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 210,
+"connected": [209,211],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 211,
+"connected": [210,212],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 212,
+"connected": [211],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 213,
+"connected": [206,214],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 214,
+"connected": [213,215],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 215,
+"connected": [214,216],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 216,
+"connected": [215,217],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 217,
+"connected": [216,218],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 218,
+"connected": [217,219],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 219,
+"connected": [218,220],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 220,
+"connected": [219,221],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 221,
+"connected": [220,222],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 222,
+"connected": [221,223],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 223,
+"connected": [222,224],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 224,
+"connected": [223,225],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 225,
+"connected": [224,226],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 226,
+"connected": [225,227],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 227,
+"connected": [226,228],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 228,
+"connected": [227,229],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 229,
+"connected": [228,230],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 230,
+"connected": [229,231],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 231,
+"connected": [230,232],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 232,
+"connected": [221,233],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 233,
+"connected": [232,234],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 234,
+"connected": [233,235],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 235,
+"connected": [234,236],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 236,
+"connected": [235,237],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 237,
+"connected": [236,238],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 238,
+"connected": [239,237],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 239,
+"connected": [238],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 240,
+"connected": [192,241],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 241,
+"connected": [240,243],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 242,
+"connected": [243,246],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 243,
+"connected": [244,241,242],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 244,
+"connected": [243,245,407],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 245,
+"connected": [244,250],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 246,
+"connected": [242,247],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 247,
+"connected": [246,268],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 248,
+"connected": [247,249],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 249,
+"connected": [250,248],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 250,
+"connected": [245,249,251,253],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 251,
+"connected": [250,252],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 252,
+"connected": [251,138],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 253,
+"connected": [250,254],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 254,
+"connected": [253,255],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 255,
+"connected": [254,256],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 256,
+"connected": [255,257],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 257,
+"connected": [256,258],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 258,
+"connected": [257,259],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 259,
+"connected": [258,260],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 260,
+"connected": [259,261,402],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 402,
+"connected": [260,403],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 403,
+"connected": [402,404],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 404,
+"connected": [403,327,405],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 405,
+"connected": [404,406],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 406,
+"connected": [405,407,334],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 407,
+"connected": [406,244],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 261,
+"connected": [260,262],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 262,
+"connected": [261,263,265],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 263,
+"connected": [262,264],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 264,
+"connected": [34,263],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 265,
+"connected": [262,266],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 266,
+"connected": [265,267],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 267,
+"connected": [266,268],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 268,
+"connected": [267,269,273,322],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 269,
+"connected": [268,270],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 270,
+"connected": [269,271],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 271,
+"connected": [270,272],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 272,
+"connected": [274,21],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 273,
+"connected": [268,274],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 274,
+"connected": [273,275],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 275,
+"connected": [274,276],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 276,
+"connected": [275,277],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 277,
+"connected": [276,278],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 278,
+"connected": [277,279],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 279,
+"connected": [278,280],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 280,
+"connected": [279,281],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 281,
+"connected": [280,282],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 282,
+"connected": [281,284],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 283,
+"connected": [284,294],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 284,
+"connected": [282,283,285],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 285,
+"connected": [284,287],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 287,
+"connected": [285,288],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 288,
+"connected": [287,290],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 290,
+"connected": [288,291],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 291,
+"connected": [290,293],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 293,
+"connected": [291],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 294,
+"connected": [295,283],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 295,
+"connected": [294,296],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 296,
+"connected": [295,297],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 297,
+"connected": [296,298],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 298,
+"connected": [299,286,41],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 286,
+"connected": [298,317],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 299,
+"connected": [298,300],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 300,
+"connected": [299,302],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 302,
+"connected": [300,303],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 303,
+"connected": [302,304],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 304,
+"connected": [303,306],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 306,
+"connected": [304,307],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 307,
+"connected": [306,309],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 309,
+"connected": [307,310],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 310,
+"connected": [309,311],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 311,
+"connected": [310,313],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 313,
+"connected": [311,314],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 314,
+"connected": [313,316],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 316,
+"connected": [314],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 317,
+"connected": [286,318],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 318,
+"connected": [317,319],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 319,
+"connected": [318,323,320],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 320,
+"connected": [319,321],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 321,
+"connected": [320,322],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 322,
+"connected": [321,268],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 323,
+"connected": [319,324],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 324,
+"connected": [323,325],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 325,
+"connected": [326,328,326],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 326,
+"connected": [325,327],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 327,
+"connected": [326,404],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 328,
+"connected": [325,329],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 329,
+"connected": [328,330],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 330,
+"connected": [331,329],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 331,
+"connected": [332,330],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 332,
+"connected": [331,333],
+"capacity": 1,
+"stop": null
+},
+{
+"id": 333,
+"connected": [332,332,335,340],
+"capacity": 1,
+"stop": null
 }
 ]
