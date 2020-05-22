@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Passenger {
     public Stop end_stop;
-    public Stop start_stop;
-    public Tram tram_on;
+    private Stop start_stop;
+    //public Tram tram_on;
     private List<Stop> all_stops = new ArrayList<>();
 
     private Stop set_end_stop(){
