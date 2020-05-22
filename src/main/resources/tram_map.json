@@ -1,8 +1,8 @@
 [{
   "id": 1,
   "connected": [2],
-  "capacity": 1,
-  "stop": null
+  "capacity": 2,
+  "stop": "Kowale"
 },
 {
 "id": 2,
@@ -13,8 +13,8 @@
 {
 "id": 3,
 "connected": [2, 4],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Bociania"
 },
 {
 "id": 4,
@@ -25,8 +25,8 @@
 {
 "id": 5,
 "connected": [4, 6],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Gęsia"
 },
 {
 "id": 6,
@@ -43,8 +43,8 @@
 {
 "id": 8,
 "connected": [7, 9],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kwidzyńska"
 },
 {
 "id": 9,
@@ -61,8 +61,8 @@
 {
 "id": 11,
 "connected": [10, 12],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kętrzyńska"
 },
 {
 "id": 12,
@@ -79,8 +79,8 @@
 {
 "id": 14,
 "connected": [13, 15],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kromera"
 },
 {
 "id": 15,
@@ -91,8 +91,8 @@
 {
 "id": 16,
 "connected": [15, 17],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Mosty Warszawskie"
 },
 {
 "id": 17,
@@ -103,8 +103,8 @@
 {
 "id": 18,
 "connected": [17, 19],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Daszyńskiego"
 },
 {
 "id": 19,
@@ -121,8 +121,8 @@
 {
 "id": 21,
 "connected": [20, 22,29,272],
-"capacity": 1,
-"stop": null
+"capacity": 4,
+"stop": "Nowowiejska"
 },
 {
 "id": 22,
@@ -139,8 +139,8 @@
 {
 "id": 24,
 "connected": [23, 25],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Wyszyńskiego"
 },
 {
 "id": 25,
@@ -151,8 +151,8 @@
 {
 "id": 26,
 "connected": [25, 27],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Prusa"
 },
 {
 "id": 27,
@@ -175,8 +175,8 @@
 {
 "id": 30,
 "connected": [29, 31],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Jedności Narodowej"
 },
 {
 "id": 31,
@@ -187,8 +187,8 @@
 {
 "id": 32,
 "connected": [31, 33],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Na Szńcach"
 },
 {
 "id": 33,
@@ -199,8 +199,8 @@
 {
 "id": 34,
 "connected": [33, 35,264,132],
-"capacity": 1,
-"stop": null
+"capacity": 4,
+"stop": "Plac Bema"
 },
 {
 "id": 35,
@@ -223,8 +223,8 @@
 {
 "id": 38,
 "connected": [37,39],
-"capacity": 1,
-"stop": null
+"capacity": 3,
+"stop": "Ogród Botaniczny"
 },
 {
 "id": 39,
@@ -235,8 +235,8 @@
 {
 "id": 40,
 "connected": [39,41],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Górnickiego"
 },
 {
 "id": 41,
@@ -247,8 +247,8 @@
 {
 "id": 42,
 "connected": [28,41,44,43],
-"capacity": 1,
-"stop": null
+"capacity": 4,
+"stop": "Piastowska"
 },
 {
 "id": 43,
@@ -265,8 +265,8 @@
 {
 "id": 45,
 "connected": [44,46],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Grunwaldzka"
 },
 {
 "id": 46,
@@ -277,8 +277,8 @@
 {
 "id": 47,
 "connected": [43,48,67,93,83],
-"capacity": 1,
-"stop": null
+"capacity": 8,
+"stop": "Plac Grunwaldzki"
 },
 {
 "id": 48,
@@ -289,8 +289,8 @@
 {
 "id": 49,
 "connected": [48,50],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Bujwida"
 },
 {
 "id": 50,
@@ -301,8 +301,8 @@
 {
 "id": 51,
 "connected": [46,52],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kochanowskiego"
 },
 {
 "id": 52,
@@ -313,8 +313,8 @@
 {
 "id": 53,
 "connected": [52,54],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Chopina"
 },
 {
 "id": 54,
@@ -325,8 +325,8 @@
 {
 "id": 55,
 "connected": [54,56],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Karłowicza"
 },
 {
 "id": 56,
@@ -337,8 +337,8 @@
 {
 "id": 57,
 "connected": [56,58],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Stadion Olimpijski"
 },
 {
 "id": 58,
@@ -355,8 +355,8 @@
 {
 "id": 60,
 "connected": [59,61],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "9 Maja"
 },
 {
 "id": 61,
@@ -373,8 +373,8 @@
 {
 "id": 63,
 "connected": [62,64],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Godebskiego"
 },
 {
 "id": 64,
@@ -385,8 +385,8 @@
 {
 "id": 65,
 "connected": [64,66],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Sępolno"
 },
 {
 "id": 66,
@@ -403,8 +403,8 @@
 {
 "id": 68,
 "connected": [67,69],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kliniki"
 },
 {
 "id": 69,
@@ -415,8 +415,8 @@
 {
 "id": 70,
 "connected": [69,71],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Hala Stulecia"
 },
 {
 "id": 71,
@@ -427,8 +427,8 @@
 {
 "id": 72,
 "connected": [71,73],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "ZOO"
 },
 {
 "id": 73,
@@ -439,8 +439,8 @@
 {
 "id": 74,
 "connected": [73,75],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Tramwajowa"
 },
 {
 "id": 75,
@@ -451,8 +451,8 @@
 {
 "id": 76,
 "connected": [75,77],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Chełmońskiego"
 },
 {
 "id": 77,
@@ -463,8 +463,8 @@
 {
 "id": 78,
 "connected": [77,79],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Piramowicza"
 },
 {
 "id": 79,
@@ -475,8 +475,8 @@
 {
 "id": 80,
 "connected": [79,81],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Spółdzielcza"
 },
 {
 "id": 81,
@@ -487,8 +487,8 @@
 {
 "id": 82,
 "connected": [81],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Biskupin"
 },
 {
 "id": 83,
@@ -499,8 +499,8 @@
 {
 "id": 84,
 "connected": [83,85],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Reja"
 },
 {
 "id": 85,
@@ -511,8 +511,8 @@
 {
 "id": 86,
 "connected": [85,87],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Katedra"
 },
 {
 "id": 87,
@@ -529,14 +529,14 @@
 {
 "id": 89,
 "connected": [88,94],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Urząd Wojewódzki"
 },
 {
 "id": 90,
 "connected": [91,94],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Urządk Wojewódzki"
 },
 {
 "id": 91,
@@ -547,8 +547,8 @@
 {
 "id": 92,
 "connected": [91,93],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Most Grunwaldzki"
 },
 {
 "id": 93,
@@ -595,8 +595,8 @@
 {
 "id": 100,
 "connected": [99,95,101,121],
-"capacity": 1,
-"stop": null
+"capacity": 3,
+"stop": "Plac Wróblewskiego"
 },
 {
 "id": 101,
@@ -613,8 +613,8 @@
 {
 "id": 103,
 "connected": [102,104],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Plac Zgody"
 },
 {
 "id": 104,
@@ -631,8 +631,8 @@
 {
 "id": 106,
 "connected": [105,107],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Na Niskich Ląkach"
 },
 {
 "id": 107,
@@ -643,8 +643,8 @@
 {
 "id": 108,
 "connected": [107,109],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Krakowska"
 },
 {
 "id": 109,
@@ -655,8 +655,8 @@
 {
 "id": 110,
 "connected": [109,111],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Praktiker Sconto"
 },
 {
 "id": 111,
@@ -667,8 +667,8 @@
 {
 "id": 112,
 "connected": [111,113],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Armii Krajowej"
 },
 {
 "id": 113,
@@ -679,8 +679,8 @@
 {
 "id": 114,
 "connected": [113,115],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Park Wschodni"
 },
 {
 "id": 115,
@@ -691,8 +691,8 @@
 {
 "id": 116,
 "connected": [115,117],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Karwińska"
 },
 {
 "id": 117,
@@ -703,8 +703,8 @@
 {
 "id": 118,
 "connected": [117,119],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Garbarnia"
 },
 {
 "id": 119,
@@ -715,8 +715,8 @@
 {
 "id": 120,
 "connected": [119],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Księże Małe"
 },
 {
 "id": 121,
@@ -733,8 +733,8 @@
 {
 "id": 123,
 "connected": [122,124],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Komuny Paryskiej"
 },
 {
 "id": 124,
@@ -751,8 +751,8 @@
 {
 "id": 126,
 "connected": [125,127],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kościuszki"
 },
 {
 "id": 127,
@@ -769,8 +769,8 @@
 {
 "id": 129,
 "connected": [128,130],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Pułaskiego"
 },
 {
 "id": 130,
@@ -794,13 +794,13 @@
 "id": 133,
 "connected": [132,134],
 "capacity": 1,
-"stop": null
+"stop": "null"
 },
 {
 "id": 134,
 "connected": [134,135],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Hala Targowa"
 },
 {
 "id": 135,
@@ -811,8 +811,8 @@
 {
 "id": 136,
 "connected": [135,137],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Plac Nowy Targ"
 },
 {
 "id": 137,
@@ -823,8 +823,8 @@
 {
 "id": 138,
 "connected": [137,98,139,252],
-"capacity": 1,
-"stop": null
+"capacity": 6,
+"stop": "Geleria Dominikańska"
 },
 {
 "id": 139,
@@ -841,8 +841,8 @@
 {
 "id": 141,
 "connected": [140,142],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Wzgórze Partyzantów"
 },
 {
 "id": 142,
@@ -853,8 +853,8 @@
 {
 "id": 143,
 "connected": [142,131,144,188],
-"capacity": 1,
-"stop": null
+"capacity": 6,
+"stop": "Dworzec Głowny"
 },
 {
 "id": 144,
@@ -865,8 +865,8 @@
 {
 "id": 145,
 "connected": [144,146],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Dwprzec Autobusowy"
 },
 {
 "id": 146,
@@ -877,8 +877,8 @@
 {
 "id": 147,
 "connected": [146,148,174],
-"capacity": 1,
-"stop": null
+"capacity": 3,
+"stop": "Dyrekcyjna"
 },
 {
 "id": 148,
@@ -889,8 +889,8 @@
 {
 "id": 149,
 "connected": [148,150],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Joannitów"
 },
 {
 "id": 150,
@@ -901,8 +901,8 @@
 {
 "id": 151,
 "connected": [150,152],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Gajowa"
 },
 {
 "id": 152,
@@ -913,8 +913,8 @@
 {
 "id": 153,
 "connected": [152,154],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Prudnicka"
 },
 {
 "id": 154,
@@ -925,8 +925,8 @@
 {
 "id": 155,
 "connected": [154,156],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kamienna"
 },
 {
 "id": 156,
@@ -937,8 +937,8 @@
 {
 "id": 157,
 "connected": [166,158,156],
-"capacity": 1,
-"stop": null
+"capacity": 3,
+"stop": "Bardzka"
 },
 {
 "id": 158,
@@ -949,8 +949,8 @@
 {
 "id": 159,
 "connected": [158,160],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Nyska"
 },
 {
 "id": 160,
@@ -961,8 +961,8 @@
 {
 "id": 161,
 "connected": [160,162],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Transbud"
 },
 {
 "id": 162,
@@ -973,8 +973,8 @@
 {
 "id": 163,
 "connected": [162,164],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Klimasa"
 },
 {
 "id": 164,
@@ -985,8 +985,8 @@
 {
 "id": 165,
 "connected": [164],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Tarnogaj"
 },
 {
 "id": 166,
@@ -997,8 +997,8 @@
 {
 "id": 167,
 "connected": [166,168],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Krynicka"
 },
 {
 "id": 168,
@@ -1009,8 +1009,8 @@
 {
 "id": 169,
 "connected": [168,170],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Morwowa"
 },
 {
 "id": 170,
@@ -1021,8 +1021,8 @@
 {
 "id": 171,
 "connected": [170,172],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Swieradowska"
 },
 {
 "id": 172,
@@ -1033,8 +1033,8 @@
 {
 "id": 173,
 "connected": [172],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Gaj"
 },
 {
 "id": 174,
@@ -1045,8 +1045,8 @@
 {
 "id": 175,
 "connected": [174,176],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Sanocka"
 },
 {
 "id": 176,
@@ -1057,8 +1057,8 @@
 {
 "id": 177,
 "connected": [176,178],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Uniwersytet Ekonomiczny"
 },
 {
 "id": 178,
@@ -1069,8 +1069,8 @@
 {
 "id": 179,
 "connected": [178,180],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Wiśniowa"
 },
 {
 "id": 180,
@@ -1081,8 +1081,8 @@
 {
 "id": 181,
 "connected": [180,182],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Jaworowa"
 },
 {
 "id": 182,
@@ -1093,8 +1093,8 @@
 {
 "id": 183,
 "connected": [182,184],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Weigla"
 },
 {
 "id": 184,
@@ -1105,8 +1105,8 @@
 {
 "id": 185,
 "connected": [184,186],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Pułtuska"
 },
 {
 "id": 186,
@@ -1117,8 +1117,8 @@
 {
 "id": 187,
 "connected": [186],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Park Południowy"
 },
 {
 "id": 188,
@@ -1135,8 +1135,8 @@
 {
 "id": 190,
 "connected": [189,191],
-"capacity": 1,
-"stop": null
+"capacity": 4,
+"stop": "Arkady"
 },
 {
 "id": 191,
@@ -1147,8 +1147,8 @@
 {
 "id": 192,
 "connected": [191,193,339,240],
-"capacity": 1,
-"stop": null
+"capacity": 8,
+"stop": "Plac Legionów"
 },
 {
 "id": 193,
@@ -1159,8 +1159,8 @@
 {
 "id": 194,
 "connected": [194,195],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Grabiszyńska"
 },
 {
 "id": 195,
@@ -1171,8 +1171,8 @@
 {
 "id": 196,
 "connected": [195,197],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Pereca"
 },
 {
 "id": 197,
@@ -1183,8 +1183,8 @@
 {
 "id": 198,
 "connected": [197.199],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Stalowa"
 },
 {
 "id": 199,
@@ -1195,8 +1195,8 @@
 {
 "id": 200,
 "connected": [199,201],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Fadroma"
 },
 {
 "id": 201,
@@ -1207,8 +1207,8 @@
 {
 "id": 202,
 "connected": [301,203],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Bzowa"
 },
 {
 "id": 203,
@@ -1219,8 +1219,8 @@
 {
 "id": 204,
 "connected": [203,205],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Hutmen"
 },
 {
 "id": 205,
@@ -1231,8 +1231,8 @@
 {
 "id": 206,
 "connected": [207,213,205],
-"capacity": 1,
-"stop": null
+"capacity": 6,
+"stop": "FAT"
 },
 {
 "id": 207,
@@ -1243,8 +1243,8 @@
 {
 "id": 208,
 "connected": [207,209],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Fiołkowa"
 },
 {
 "id": 209,
@@ -1255,8 +1255,8 @@
 {
 "id": 210,
 "connected": [209,211],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Grabiszyńska Cmentarz"
 },
 {
 "id": 211,
@@ -1267,8 +1267,8 @@
 {
 "id": 212,
 "connected": [211],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Oporów"
 },
 {
 "id": 213,
@@ -1279,8 +1279,8 @@
 {
 "id": 214,
 "connected": [213,215],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Aleja Pracy"
 },
 {
 "id": 215,
@@ -1291,8 +1291,8 @@
 {
 "id": 216,
 "connected": [215,217],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Ojca Beyzyma"
 },
 {
 "id": 217,
@@ -1303,8 +1303,8 @@
 {
 "id": 218,
 "connected": [217,219],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Mielecka"
 },
 {
 "id": 219,
@@ -1315,8 +1315,8 @@
 {
 "id": 220,
 "connected": [219,221],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Gajowicka"
 },
 {
 "id": 221,
@@ -1327,8 +1327,8 @@
 {
 "id": 222,
 "connected": [221,223],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Hallera"
 },
 {
 "id": 223,
@@ -1339,8 +1339,8 @@
 {
 "id": 224,
 "connected": [223,225],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Jastrzębia"
 },
 {
 "id": 225,
@@ -1351,8 +1351,8 @@
 {
 "id": 226,
 "connected": [225,227],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Orla"
 },
 {
 "id": 227,
@@ -1363,8 +1363,8 @@
 {
 "id": 228,
 "connected": [227,229],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Krzyki"
 },
 {
 "id": 229,
@@ -1375,8 +1375,8 @@
 {
 "id": 230,
 "connected": [229,231],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Radio i Telewizja"
 },
 {
 "id": 231,
@@ -1386,27 +1386,21 @@
 },
 {
 "id": 232,
-"connected": [221,233],
-"capacity": 1,
-"stop": null
-},
-{
-"id": 233,
-"connected": [232,234],
-"capacity": 1,
-"stop": null
+"connected": [231,234],
+"capacity": 2,
+"stop": "Przyjaźni"
 },
 {
 "id": 234,
-"connected": [233,235],
+"connected": [232,235],
 "capacity": 1,
 "stop": null
 },
 {
 "id": 235,
 "connected": [234,236],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Braterska"
 },
 {
 "id": 236,
@@ -1417,8 +1411,8 @@
 {
 "id": 237,
 "connected": [236,238],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Sąsiedzka"
 },
 {
 "id": 238,
@@ -1429,8 +1423,8 @@
 {
 "id": 239,
 "connected": [238],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Klecina"
 },
 {
 "id": 240,
@@ -1441,8 +1435,8 @@
 {
 "id": 241,
 "connected": [240,243],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Podwale"
 },
 {
 "id": 242,
@@ -1471,8 +1465,8 @@
 {
 "id": 246,
 "connected": [242,247],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Renoma"
 },
 {
 "id": 247,
@@ -1483,8 +1477,8 @@
 {
 "id": 248,
 "connected": [247,249],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Opera"
 },
 {
 "id": 249,
@@ -1495,8 +1489,8 @@
 {
 "id": 250,
 "connected": [245,249,251,253],
-"capacity": 1,
-"stop": null
+"capacity": 6,
+"stop": "Swidnicka"
 },
 {
 "id": 251,
@@ -1519,8 +1513,8 @@
 {
 "id": 254,
 "connected": [253,255],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Oławska"
 },
 {
 "id": 255,
@@ -1531,8 +1525,8 @@
 {
 "id": 256,
 "connected": [255,257],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Wita Stwosza"
 },
 {
 "id": 257,
@@ -1543,8 +1537,8 @@
 {
 "id": 258,
 "connected": [257,259],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Uniwersytecka"
 },
 {
 "id": 259,
@@ -1561,8 +1555,8 @@
 {
 "id": 402,
 "connected": [260,403],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Uniwersytet"
 },
 {
 "id": 403,
@@ -1585,8 +1579,8 @@
 {
 "id": 406,
 "connected": [405,407,334],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Rynek"
 },
 {
 "id": 407,
@@ -1603,8 +1597,8 @@
 {
 "id": 262,
 "connected": [261,263,265],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Dubois"
 },
 {
 "id": 263,
@@ -1627,8 +1621,8 @@
 {
 "id": 266,
 "connected": [265,267],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Paulińska"
 },
 {
 "id": 267,
@@ -1639,8 +1633,8 @@
 {
 "id": 268,
 "connected": [267,269,273,322],
-"capacity": 1,
-"stop": null
+"capacity": 6,
+"stop": "Dworzec Nadodrze"
 },
 {
 "id": 269,
@@ -1657,8 +1651,8 @@
 {
 "id": 271,
 "connected": [270,272],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Słowiańska"
 },
 {
 "id": 272,
@@ -1675,8 +1669,8 @@
 {
 "id": 274,
 "connected": [273,275],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Trzebnicka"
 },
 {
 "id": 275,
@@ -1693,8 +1687,8 @@
 {
 "id": 277,
 "connected": [276,278],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Zawalna"
 },
 {
 "id": 278,
@@ -1711,8 +1705,8 @@
 {
 "id": 280,
 "connected": [279,281],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Broniewskiego"
 },
 {
 "id": 281,
@@ -1735,8 +1729,8 @@
 {
 "id": 284,
 "connected": [282,283,285],
-"capacity": 1,
-"stop": null
+"capacity": 3,
+"stop": "Kamieńskiego"
 },
 {
 "id": 285,
@@ -1747,8 +1741,8 @@
 {
 "id": 287,
 "connected": [285,288],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kępińska"
 },
 {
 "id": 288,
@@ -1759,8 +1753,8 @@
 {
 "id": 290,
 "connected": [288,291],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Wrozamet"
 },
 {
 "id": 291,
@@ -1771,8 +1765,8 @@
 {
 "id": 293,
 "connected": [291],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Marino"
 },
 {
 "id": 294,
@@ -1783,8 +1777,8 @@
 {
 "id": 295,
 "connected": [294,296],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Bałtycka"
 },
 {
 "id": 296,
@@ -1807,14 +1801,14 @@
 {
 "id": 286,
 "connected": [298,317],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kleczkowska"
 },
 {
 "id": 299,
 "connected": [298,300],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Most Osobowicki"
 },
 {
 "id": 300,
@@ -1825,8 +1819,8 @@
 {
 "id": 302,
 "connected": [300,303],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Serbska"
 },
 {
 "id": 303,
@@ -1843,8 +1837,8 @@
 {
 "id": 306,
 "connected": [304,307],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Osobowicka Cmentarz II"
 },
 {
 "id": 307,
@@ -1855,8 +1849,8 @@
 {
 "id": 309,
 "connected": [307,310],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Osobowicka Cmentarz"
 },
 {
 "id": 310,
@@ -1873,8 +1867,8 @@
 {
 "id": 313,
 "connected": [311,314],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Most Milenijny"
 },
 {
 "id": 314,
@@ -1885,8 +1879,8 @@
 {
 "id": 316,
 "connected": [314],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Osobowice "
 },
 {
 "id": 317,
@@ -1903,8 +1897,8 @@
 {
 "id": 319,
 "connected": [318,323,320],
-"capacity": 1,
-"stop": null
+"capacity": 3,
+"stop": "Plac Staszica"
 },
 {
 "id": 320,
@@ -1939,8 +1933,8 @@
 {
 "id": 325,
 "connected": [326,328,326],
-"capacity": 1,
-"stop": null
+"capacity": 3,
+"stop": "Pomorska"
 },
 {
 "id": 326,
@@ -1969,8 +1963,8 @@
 {
 "id": 330,
 "connected": [331,329],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Mosty Mieszczańskie"
 },
 {
 "id": 331,
@@ -1987,8 +1981,8 @@
 {
 "id": 333,
 "connected": [332,332,335,340],
-"capacity": 1,
-"stop": null
+"capacity": 8,
+"stop": "Plac Jana Pawła II"
 },
 {
 "id": 334,
@@ -2017,8 +2011,8 @@
 {
 "id": 338,
 "connected": [337,339],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Plac Orląt Lwowskich"
 },
 {
 "id": 339,
@@ -2035,14 +2029,20 @@
 {
 "id": 350,
 "connected": [351,340],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Młodych Techników"
 },
 {
 "id": 351,
 "connected": [350,352],
 "capacity": 1,
 "stop": null
+},
+  {
+"id": 352,
+"connected": [351,353],
+"capacity": 2,
+"stop": "Plac Strzegomski"
 },
 {
 "id": 353,
@@ -2053,8 +2053,8 @@
 {
 "id": 354,
 "connected": [353,355],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Dolmed"
 },
 {
 "id": 355,
@@ -2065,8 +2065,8 @@
 {
 "id": 356,
 "connected": [355,357],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Srubowa"
 },
 {
 "id": 357,
@@ -2077,14 +2077,14 @@
 {
 "id": 358,
 "connected": [357],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Park Przemysłowy"
 },
 {
 "id": 359,
 "connected": [353,360],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Zachodnia"
 },
 {
 "id": 360,
@@ -2095,8 +2095,8 @@
 {
 "id": 361,
 "connected": [360,362],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Niedźwiedzia"
 },
 {
 "id": 362,
@@ -2107,8 +2107,8 @@
 {
 "id": 363,
 "connected": [362,364],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Małopanewska"
 },
 {
 "id": 364,
@@ -2119,8 +2119,8 @@
 {
 "id": 365,
 "connected": [364,366,375],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kwiska"
 },
 {
 "id": 366,
@@ -2131,8 +2131,8 @@
 {
 "id": 367,
 "connected": [366,368],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kolista"
 },
 {
 "id": 368,
@@ -2143,8 +2143,8 @@
 {
 "id": 369,
 "connected": [368,370],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Pilczycka"
 },
 {
 "id": 370,
@@ -2161,20 +2161,20 @@
 {
 "id": 372,
 "connected": [371,373,374],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Modra"
 },
 {
 "id": 373,
 "connected": [372],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kozanów"
 },
 {
 "id": 374,
 "connected": [372],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Górnicza"
 },
 {
 "id": 375,
@@ -2185,8 +2185,8 @@
 {
 "id": 376,
 "connected": [375,377],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "DH Astra"
 },
 {
 "id": 377,
@@ -2197,8 +2197,8 @@
 {
 "id": 378,
 "connected": [377,380],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Park Zachodni"
 },
 {
 "id": 380,
@@ -2209,8 +2209,8 @@
 {
 "id": 381,
 "connected": [380,382],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Bajana"
 },
 {
 "id": 382,
@@ -2221,8 +2221,8 @@
 {
 "id": 383,
 "connected": [384,382],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Metalowców"
 },
 {
 "id": 384,
@@ -2233,8 +2233,8 @@
 {
 "id": 385,
 "connected": [384,386],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Pilczyce"
 },
 {
 "id": 386,
@@ -2245,8 +2245,8 @@
 {
 "id": 387,
 "connected": [386,388],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Glinianki"
 },
 {
 "id": 388,
@@ -2257,8 +2257,8 @@
 {
 "id": 389,
 "connected": [390,388],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Grabowa"
 },
 {
 "id": 390,
@@ -2269,8 +2269,8 @@
 {
 "id": 391,
 "connected": [390,392],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Kamiennogórska"
 },
 {
 "id": 392,
@@ -2281,8 +2281,8 @@
 {
 "id": 393,
 "connected": [392,394],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Złotnicka"
 },
 {
 "id": 394,
@@ -2293,8 +2293,8 @@
 {
 "id": 395,
 "connected": [394,396],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Wschowska"
 },
 {
 "id": 396,
@@ -2305,8 +2305,8 @@
 {
 "id": 397,
 "connected": [396,398],
-"capacity": 1,
-"stop": null
+"capacity": 2,
+"stop": "Jeleniogórska"
 },
 {
 "id": 398,
@@ -2316,20 +2316,8 @@
 },
 {
 "id": 399,
-"connected": [398,400],
-"capacity": 1,
-"stop": null
-},
-{
-"id": 400,
-"connected": [399,401],
-"capacity": 1,
-"stop": null
-},
-{
-"id": 401,
-"connected": [400],
-"capacity": 1,
-"stop": null
+"connected": [398],
+"capacity": 2,
+"stop": "Leśnica"
 }
 ]
