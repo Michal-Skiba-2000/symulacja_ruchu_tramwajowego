@@ -39,9 +39,9 @@ public class Presimulation {
         }
     }
 
-    private static void setRandomEvents(List<RandomEvent> all_possible_events){
-        int a=1;
-        double b=20;
-        //event = new RandomEvent(a,b);
+    private static void setRandomEvents(List<RandomEvent> all_possible_events) throws IOException, JSONException {
+        JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/random_events.json");
+        ResourceHandler.addRandomEvents(arr,all_possible_events);
+
     }
 }

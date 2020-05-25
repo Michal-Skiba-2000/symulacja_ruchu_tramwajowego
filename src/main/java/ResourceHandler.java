@@ -67,9 +67,16 @@ public class ResourceHandler {
         return sectors;
     }
 
-    private static List<RandomEvent> getRandomEvents()
-    {
+    public static void addRandomEvents(JSONArray arr,List<RandomEvent> all_possible_events) throws JSONException {
+        JSONObject json;
+        int duration;
+        double probability;
+        for(int i = 0; i < arr.length(); i++){
+            json = arr.getJSONObject(i);
 
-        return Events; 
+            duration = json.getInt("duration");
+            probability = json.getDouble("probability");
+            all_possible_events.add(new RandomEvent(duration, probability));
+        }
     }
 }

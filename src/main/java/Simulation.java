@@ -10,36 +10,52 @@ import java.io.IOException;
 */
 public class  Simulation {
 
-    private List<Tram> all_trams = new ArrayList<Tram>();
-    private List<Sector> all_sectors = new ArrayList<Sector>();
+    private List<Tram> all_trams = new ArrayList<>();
+    private List<Sector> all_sectors = new ArrayList<>();
     private List<Sector> sectors_to_repair = new ArrayList<>();
-    private List<RandomEvent> all_possible_events = new ArrayList<RandomEvent>();
+    private List<RandomEvent> all_possible_events = new ArrayList<>();
     private List<Tramline> all_tramlines = new ArrayList<>();
     private List<Passenger> all_passengers = new ArrayList<>();
     private List<Stop> all_stops = new ArrayList<>();
     private LocalTime time;
-    private RandomEvent event;
 
     /**
      * Resolve random events from all_possible_events list
      * and if any happen set event to tram or sector
      */
     private void resolveRandomEvents(){
-        int i= (int) Math.round(Math.random()*1000)%100;
-        if(i< event.probability) {
-            i=(int) (Math.round(Math.random()*1000)%all_sectors.size());
-            all_sectors.get(i).assignEvent(event);
-            sectors_to_repair.add(all_sectors.get(i));
+        double probability=Math.random();
+        int flag=0;
+        for(int j = 0; j<all_possible_events.size()&&flag==0; j++) {
+            if(probability< all_possible_events.get(j).probability) {
+                int sector_id=(int) (Math.round(Math.random()*1000)%all_sectors.size());
+                all_sectors.get(sector_id).assignEvent(all_possible_events.get(j));
+                sectors_to_repair.add(all_sectors.get(sector_id));
+                flag=1;
+            }
         }
+
     }
 
     /**
      * Spawn passengers on trams based on time
      */
     private void spawnPassengers() {
-        int start= (int) (Math.round(Math.random()*1000)% all_stops.size());
-        Passenger passenger = new Passenger(all_stops.get(start), all_stops);
-        all_passengers.add(passenger);
+        int maxNumberOfPassengers = 0;
+        if(time.getHour()<6)maxNumberOfPassengers=50;
+        if(time.getHour()<9 && time.getHour()>=6)maxNumberOfPassengers=150;
+        if(time.getHour()>=9&&time.getHour()<14)maxNumberOfPassengers=50;
+        if(time.getHour()>=14&&time.getHour()<18)maxNumberOfPassengers=150;
+        if(time.getHour()>=18&&time.getHour()<21)maxNumberOfPassengers=50;
+        if(time.getHour()>=21)maxNumberOfPassengers=30;
+
+        int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
+
+        for (int i =0;i<numberOfPassengers;i++) {
+            int start = (int) (Math.round(Math.random() * 100)) % all_stops.size();
+            Passenger passenger = new Passenger(all_stops.get(start), all_stops);
+            all_passengers.add(passenger);
+        }
     }
 
     /**
