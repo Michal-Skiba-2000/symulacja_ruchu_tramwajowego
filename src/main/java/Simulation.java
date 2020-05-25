@@ -1,4 +1,3 @@
-import java.math.RoundingMode;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +24,11 @@ public class  Simulation {
      * Resolve random events from all_possible_events list
      * and if any happen set event to tram or sector
      */
-    private void resolve_random_events(){
+    private void resolveRandomEvents(){
         int i= (int) Math.round(Math.random()*1000)%100;
         if(i< event.probability) {
             i=(int) (Math.round(Math.random()*1000)%all_sectors.size());
-            all_sectors.get(i).assign_event(event);
+            all_sectors.get(i).assignEvent(event);
             sectors_to_repair.add(all_sectors.get(i));
         }
     }
@@ -37,7 +36,7 @@ public class  Simulation {
     /**
      * Spawn passengers on trams based on time
      */
-    private void spawn_passengers() {
+    private void spawnPassengers() {
         int start= (int) (Math.round(Math.random()*1000)% all_stops.size());
         Passenger passenger = new Passenger(all_stops.get(start), all_stops);
         all_passengers.add(passenger);
@@ -46,16 +45,16 @@ public class  Simulation {
     /**
      * Resolve move function on all trams
      */
-    private void move_trams(){
-        for(int i = 0; i < all_trams.size(); i++){
-            all_trams.get(i).make_move();
+    private void moveTrams(){
+        for (Tram all_tram : all_trams) {
+            all_tram.make_move();
         }
     }
 
     /**
      * Repair all inactive sectors
      */
-    private void repair_sectors(){
+    private void repairSectors(){
         if(sectors_to_repair != null){
             Sector sector;
             for(int i = sectors_to_repair.size()-1; i >= 0; i--){
@@ -74,10 +73,10 @@ public class  Simulation {
     private void simulate(){
         // potrzebujemy jakichś struktur w których będziemy zapisywać dane symulacji
         while( !(time.getHour() == 23 && time.getMinute() == 0) ){
-            resolve_random_events();
-            spawn_passengers();
-            move_trams();
-            repair_sectors();
+            resolveRandomEvents();
+            spawnPassengers();
+            moveTrams();
+            repairSectors();
             time = time.plusMinutes(1);
         }
     }

@@ -4,7 +4,7 @@ public class Repairable {
     protected boolean is_active;
 
     public void repair(){
-        if(this.is_active == true ){ return; }
+        if(this.is_active){ return; }
         if (this.random_event != null){
             this.time_to_repair += random_event.duration;
             this.random_event = null;
@@ -15,7 +15,7 @@ public class Repairable {
         }
     }
 
-    public void assign_event(RandomEvent event){
+    public void assignEvent(RandomEvent event){
         this.random_event = event;
         this.is_active = false;
     }

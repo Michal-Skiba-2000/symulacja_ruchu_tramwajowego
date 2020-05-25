@@ -1,12 +1,16 @@
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.events.Event;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
 public class ResourceHandler {
+    private static List<RandomEvent> Events;
+
     public static JSONArray getJSONArrayFromFile(String filename) throws IOException, JSONException {
         String content = new String(Files.readAllBytes(Paths.get(filename)));
         return new JSONArray(content);
@@ -22,7 +26,7 @@ public class ResourceHandler {
             json = arr.getJSONObject(i);
             id = json.getInt("id");
             stop_name = json.getString("stop");
-            if(stop_name!="null") {
+            if(!stop_name.equals("null")) {
                 stop = new Stop(stop_name);
                 stops_list.add(stop);
             }
@@ -61,5 +65,11 @@ public class ResourceHandler {
             sectors.add(sector);
         }
         return sectors;
+    }
+
+    private static List<RandomEvent> getRandomEvents()
+    {
+
+        return Events; 
     }
 }

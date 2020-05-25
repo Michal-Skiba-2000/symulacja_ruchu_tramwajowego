@@ -7,7 +7,7 @@ public class Passenger {
     //public Tram tram_on;
     private List<Stop> all_stops = new ArrayList<>();
 
-    private Stop set_end_stop(){
+    private Stop setEndStop(){
         int rand;
             do {
                 rand= (int) (Math.round(Math.random()*1000)%all_stops.size());
@@ -19,6 +19,6 @@ public class Passenger {
     public Passenger(Stop start_stop,List<Stop> stop_list){
         this.start_stop = start_stop;
         all_stops.addAll(stop_list);
-        this.end_stop = set_end_stop();
+        this.end_stop = setEndStop();
     }
 }

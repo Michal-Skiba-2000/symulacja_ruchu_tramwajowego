@@ -8,20 +8,18 @@ public class Sector extends Repairable {
     private int capacity;
     private int id;
 
-    public boolean has_space(int direction) {
+    public boolean hasSpace(int direction) {
         int count = 0;
-        for(int i = 0; i < trams_on.size(); i++){
-            if( trams_on.get(i).get_direction() == direction ){
+        for (Tram tram : trams_on) {
+            if (tram.get_direction() == direction) {
                 count++;
             }
         }
-        if(count < capacity) { return true; }
-        else { return false; }
+        return count < capacity;
     }
 
-    public boolean has_stop(){
-        if( this.stop != null ) { return  true; }
-        else { return false; }
+    public boolean hasStop(){
+        return this.stop != null;
     }
 
     public int getId(){ return id; }

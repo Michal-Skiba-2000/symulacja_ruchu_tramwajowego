@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Tram extends Repairable {
     public Sector sector_on;
-    private Tramline tramline;
-    private List<Passenger> passengers_on = new ArrayList<>();
+    private final Tramline tramline;
+    private final List<Passenger> passengers_on = new ArrayList<>();
     private int direction; // 0 - previous sector on list, 1 - next sector ob list
 
     private Sector get_sector_to_move_on(){
@@ -32,8 +32,7 @@ public class Tram extends Repairable {
 
     private boolean check_if_active(Sector sector){
         if( is_active ){ repair(); }
-        if( is_active && sector.is_active ){ return true; }
-        return  false;
+        return is_active && sector.is_active;
     }
 
     private void leave_passengers(Stop stop) {
@@ -47,11 +46,11 @@ public class Tram extends Repairable {
     }
 
     private boolean can_be_loaded(Sector sector){
-        if( tramline.sectors.indexOf(sector) != -1 ){
+        if(tramline.sectors.contains(sector)){
             int sector_index = tramline.sectors.indexOf(sector);
             int current_sector_index = tramline.sectors.indexOf(sector_on);
             if(direction == 0 && sector_index < current_sector_index) { return true;}
-            else if(direction != 0 && sector_index > current_sector_index) { return true; }
+            else return direction != 0 && sector_index > current_sector_index;
         }
         return false;
     }
@@ -73,9 +72,9 @@ public class Tram extends Repairable {
     public void make_move(){
         Sector move_on_sector = get_sector_to_move_on();
         if( !check_if_active(move_on_sector) ){ return; }
-        if( !move_on_sector.has_space(direction) ){ return; }
+        if( !move_on_sector.hasSpace(direction) ){ return; }
         sector_on = move_on_sector;
-        if( sector_on.has_stop() ){
+        if( sector_on.hasStop() ){
             Stop stop = sector_on.stop;
             leave_passengers(stop);
             load_passengers(stop);
