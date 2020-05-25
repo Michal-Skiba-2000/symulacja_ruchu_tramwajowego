@@ -6,6 +6,7 @@ public class Sector extends Repairable {
     public List<Tram> trams_on = new ArrayList<>();
     public List<Sector> connected_sectors = new ArrayList<>();
     private int capacity;
+    private int id;
 
     public boolean has_space(int direction) {
         int count = 0;
@@ -23,9 +24,12 @@ public class Sector extends Repairable {
         else { return false; }
     }
 
-    public Sector(int capacity, Stop stop){
+    public int getId(){ return id; }
+
+    public Sector(int capacity, Stop stop, int id){
         this.stop = stop;
         this.capacity = capacity;
+        this.id = id;
     }
 
     public Sector(int capacity){

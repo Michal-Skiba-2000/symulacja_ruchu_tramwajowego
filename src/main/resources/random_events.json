@@ -1,0 +1,22 @@
+[
+  {
+    "probability": 10,
+    "duration": 0.01
+  },
+  {
+    "probability": 20,
+    "duration": 0.005
+  },
+  {
+    "probability": 30,
+    "duration": 0.005
+  },
+  {
+    "probability": 40,
+    "duration": 0.003
+  },
+  {
+    "probability": 50,
+    "duration": 0.002
+  }
+]

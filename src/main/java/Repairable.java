@@ -1,5 +1,5 @@
-public abstract class Repairable {
-    public RandomEvent random_event;
+public class Repairable {
+    private RandomEvent random_event;
     private int time_to_repair;
     protected boolean is_active;
 
