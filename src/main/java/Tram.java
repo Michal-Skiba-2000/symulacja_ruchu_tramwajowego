@@ -78,9 +78,7 @@ public class Tram extends Repairable {
         if( sector_on.hasStop() ){
             Stop stop = sector_on.stop;
             leave_passengers(stop);
-            System.out.println("Passengers on board before loading: " + Integer.toString(passengers_on.size()));
             load_passengers(stop);
-            System.out.println("Passengers on board after loading: " + Integer.toString(passengers_on.size()));
         }
     }
 
