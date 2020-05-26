@@ -5,7 +5,7 @@ public class Tram extends Repairable {
     public Sector sector_on;
     private final Tramline tramline;
     private final List<Passenger> passengers_on = new ArrayList<>();
-    private int direction; // 0 - previous sector on list, 1 - next sector ob list
+    private int direction; // 0 - previous sector on list, 1 - next sector on list
 
     private Sector get_sector_to_move_on(){
         int index_of_sector = tramline.sectors.indexOf(sector_on);
@@ -50,7 +50,8 @@ public class Tram extends Repairable {
             int sector_index = tramline.sectors.indexOf(sector);
             int current_sector_index = tramline.sectors.indexOf(sector_on);
             if(direction == 0 && sector_index < current_sector_index) { return true;}
-            else return direction != 0 && sector_index > current_sector_index;
+            else if (direction != 0 && sector_index > current_sector_index) { return true; }
+            else return false;
         }
         return false;
     }
@@ -77,7 +78,9 @@ public class Tram extends Repairable {
         if( sector_on.hasStop() ){
             Stop stop = sector_on.stop;
             leave_passengers(stop);
+            System.out.println("Passengers on board before loading: " + Integer.toString(passengers_on.size()));
             load_passengers(stop);
+            System.out.println("Passengers on board after loading: " + Integer.toString(passengers_on.size()));
         }
     }
 
