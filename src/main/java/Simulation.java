@@ -24,7 +24,7 @@ public class  Simulation {
      * and if any happen set event to tram or sector
      */
     private void resolveRandomEvents(){
-        double probability=Math.random();
+        double probability=Math.round((Math.random()*100))%100;
         int flag=0;
         for(int j = 0; j<all_possible_events.size()&&flag==0; j++) {
             if(probability< all_possible_events.get(j).probability) {

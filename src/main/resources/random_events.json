@@ -1,23 +1,24 @@
 [
   {
-    "probability": 50,
-    "duration": 0.002
+    "probability": 1,
+    "duration": 0.01
   },
   {
-    "probability": 40,
+    "probability": 2,
+    "duration": 0.005
+  },
+  {
+    "probability": 3,
+    "duration": 0.005
+  },
+  {
+    "probability": 4,
     "duration": 0.003
   },
   {
-    "probability": 30,
-    "duration": 0.005
-  },
-  {
-    "probability": 20,
-    "duration": 0.005
-  },
-  {
-    "probability": 10,
-    "duration": 0.01
+    "probability": 5,
+    "duration": 0.002
+
   }
 
 ]
