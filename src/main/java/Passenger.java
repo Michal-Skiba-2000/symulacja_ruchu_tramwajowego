@@ -17,6 +17,7 @@ public class Passenger {
 
     public Passenger(Stop start_stop,List<Stop> stop_list){
         this.start_stop = start_stop;
+        start_stop.passengers_on.add(this);
         all_stops.addAll(stop_list);
         this.end_stop = setFinalStop();
     }
