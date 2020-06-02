@@ -3,7 +3,7 @@ import org.json.JSONException;
 import java.io.IOException;
 import java.util.List;
 
-public class Presimulation {
+public class Presimulation implements GameState {
     public static void presimualationSetup(List<Sector> all_sectors, List<Stop> all_stops, List<Tram> all_trams, List<Tramline> all_tramlines, List<RandomEvent> all_possible_events) throws IOException, JSONException {
         setSectors(all_sectors, all_stops);
         setTramlines(all_sectors, all_tramlines);

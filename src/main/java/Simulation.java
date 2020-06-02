@@ -1,16 +1,14 @@
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.json.JSONException;
+
 import java.io.IOException;
+import java.time.LocalTime;
 
 /**
   Main class that handles the simulation
 */
-public class  Simulation {
+public class  Simulation implements GameState{
 
-    private List<Tram> all_trams = new ArrayList<>();
+    /*private List<Tram> all_trams = new ArrayList<>();
     private List<Sector> all_sectors = new ArrayList<>();
     private List<Sector> sectors_to_repair = new ArrayList<>();
     private List<RandomEvent> all_possible_events = new ArrayList<>();
@@ -18,7 +16,8 @@ public class  Simulation {
     private List<Passenger> all_passengers = new ArrayList<>();
     private List<Stop> all_stops = new ArrayList<>();
     private LocalTime time;
-
+    */
+    LocalTime time=null;
     /**
      * Resolve random events from all_possible_events list
      * and if any happen set event to tram or sector

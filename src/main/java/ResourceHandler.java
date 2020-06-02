@@ -2,7 +2,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.events.Event;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
