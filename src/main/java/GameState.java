@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public interface GameState {
+public class GameState {
     List<Tram> all_trams = new ArrayList<>();
     List<Sector> all_sectors = new ArrayList<>();
     List<Sector> sectors_to_repair = new ArrayList<>();

@@ -1,11 +1,7 @@
-public class Repairable {
-    private RandomEvent random_event;
-    private int time_to_repair;
-    protected boolean is_active;
-
+public class Repairable extends ARepairable {
     public void repair(){
         if(this.is_active){ return; }
-        if (this.random_event != null){
+        if (this.random_event != null ){
             this.time_to_repair += random_event.duration;
             this.random_event = null;
         }
@@ -20,8 +16,5 @@ public class Repairable {
         this.is_active = false;
     }
 
-    protected Repairable(){
-        this.is_active = true;
-        this.time_to_repair = 0;
-    }
+    protected  Repairable(){super();}
 }

@@ -6,17 +6,10 @@ import java.time.LocalTime;
 /**
   Main class that handles the simulation
 */
-public class  Simulation implements GameState{
+public class  Simulation{
 
-    /*private List<Tram> all_trams = new ArrayList<>();
-    private List<Sector> all_sectors = new ArrayList<>();
-    private List<Sector> sectors_to_repair = new ArrayList<>();
-    private List<RandomEvent> all_possible_events = new ArrayList<>();
-    private List<Tramline> all_tramlines = new ArrayList<>();
-    private List<Passenger> all_passengers = new ArrayList<>();
-    private List<Stop> all_stops = new ArrayList<>();
-    private LocalTime time;
-    */
+    private GameState game_state = new GameState();
+
     LocalTime time=null;
     /**
      * Resolve random events from all_possible_events list
@@ -25,11 +18,11 @@ public class  Simulation implements GameState{
     private void resolveRandomEvents(){
         double probability=Math.round((Math.random()*100))%100;
         int flag=0;
-        for(int j = 0; j<all_possible_events.size()&&flag==0; j++) {
-            if(probability< all_possible_events.get(j).probability) {
-                int sector_id=(int) (Math.round(Math.random()*1000)%all_sectors.size());
-                all_sectors.get(sector_id).assignEvent(all_possible_events.get(j));
-                sectors_to_repair.add(all_sectors.get(sector_id));
+        for(int j = 0; j<game_state.all_possible_events.size()&&flag==0; j++) {
+            if(probability< game_state.all_possible_events.get(j).probability) {
+                int sector_id=(int) (Math.round(Math.random()*1000)%game_state.all_sectors.size());
+                game_state.all_sectors.get(sector_id).assignEvent(game_state.all_possible_events.get(j));
+                game_state.sectors_to_repair.add(game_state.all_sectors.get(sector_id));
                 flag=1;
             }
         }
@@ -51,9 +44,9 @@ public class  Simulation implements GameState{
         int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
 
         for (int i =0;i<numberOfPassengers;i++) {
-            int start = (int) (Math.round(Math.random() * 100)) % all_stops.size();
-            Passenger passenger = new Passenger(all_stops.get(start), all_stops);
-            all_passengers.add(passenger);
+            int start = (int) (Math.round(Math.random() * 100)) % game_state.all_stops.size();
+            Passenger passenger = new Passenger(game_state.all_stops.get(start), game_state.all_stops);
+            game_state.all_passengers.add(passenger);
         }
     }
 
@@ -61,7 +54,7 @@ public class  Simulation implements GameState{
      * Resolve move function on all trams
      */
     private void moveTrams(){
-        for (Tram all_tram : all_trams) {
+        for (Tram all_tram : game_state.all_trams) {
             all_tram.make_move();
         }
     }
@@ -70,12 +63,12 @@ public class  Simulation implements GameState{
      * Repair all inactive sectors
      */
     private void repairSectors(){
-        if(sectors_to_repair != null){
+        if(game_state.sectors_to_repair != null){
             Sector sector;
-            for(int i = sectors_to_repair.size()-1; i >= 0; i--){
-                sector = sectors_to_repair.get(i);
+            for(int i = game_state.sectors_to_repair.size()-1; i >= 0; i--){
+                sector = game_state.sectors_to_repair.get(i);
                 sector.repair();
-                if(sector.is_active){ sectors_to_repair.remove(i); }
+                if(sector.is_active){ game_state.sectors_to_repair.remove(i); }
             }
         }
     }
@@ -102,7 +95,7 @@ public class  Simulation implements GameState{
      */
     private Simulation()  throws IOException, JSONException{
         time = LocalTime.of(5, 0, 0);
-        Presimulation.presimualationSetup(all_sectors, all_stops, all_trams, all_tramlines, all_possible_events);
+        Presimulation.presimualationSetup(game_state);
         simulate();
     }
 
