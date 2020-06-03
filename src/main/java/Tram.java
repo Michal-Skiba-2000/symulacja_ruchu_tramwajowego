@@ -1,3 +1,4 @@
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,7 +57,7 @@ public class Tram extends Repairable {
         return false;
     }
 
-    private void load_passengers(Stop stop) {
+    private void load_passengers(Stop stop, LocalTime time) {
         Stop end_stop;
         Passenger passenger;
         for (int i = stop.passengers_on.size()-1; i >= 0; i--){
@@ -66,11 +67,12 @@ public class Tram extends Repairable {
             if( can_be_loaded(end_stop.sector) ){
                 stop.passengers_on.remove(i);
                 passengers_on.add(passenger);
+                passenger.loadTime=time;
             }
         }
     }
 
-    public void make_move(){
+    public void make_move(LocalTime time){
         Sector move_on_sector = get_sector_to_move_on();
         if( !check_if_active(move_on_sector) ){ return; }
         if( !move_on_sector.hasSpace(direction) ){ return; }
@@ -78,7 +80,7 @@ public class Tram extends Repairable {
         if( sector_on.hasStop() ){
             Stop stop = sector_on.stop;
             leave_passengers(stop);
-            load_passengers(stop);
+            load_passengers(stop,time);
         }
     }
 

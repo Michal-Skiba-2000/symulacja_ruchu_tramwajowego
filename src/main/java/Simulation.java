@@ -9,6 +9,7 @@ import java.time.LocalTime;
 public class  Simulation{
 
     private GameState game_state = new GameState();
+    Statistics statistics=new Statistics();
 
     LocalTime time=null;
     /**
@@ -23,6 +24,8 @@ public class  Simulation{
                 int sector_id=(int) (Math.round(Math.random()*1000)%game_state.all_sectors.size());
                 game_state.all_sectors.get(sector_id).assignEvent(game_state.all_possible_events.get(j));
                 game_state.sectors_to_repair.add(game_state.all_sectors.get(sector_id));
+                statistics.totalNumberOfEvents.add(game_state.all_possible_events.get(j));
+
                 flag=1;
             }
         }
@@ -46,7 +49,10 @@ public class  Simulation{
         for (int i =0;i<numberOfPassengers;i++) {
             int start = (int) (Math.round(Math.random() * 100)) % game_state.all_stops.size();
             Passenger passenger = new Passenger(game_state.all_stops.get(start), game_state.all_stops);
+            passenger.spawnTime=time;
             game_state.all_passengers.add(passenger);
+            statistics.totalNumberOfPassengers.add(passenger);
+
         }
     }
 
@@ -55,7 +61,7 @@ public class  Simulation{
      */
     private void moveTrams(){
         for (Tram all_tram : game_state.all_trams) {
-            all_tram.make_move();
+            all_tram.make_move(time);
         }
     }
 
@@ -97,6 +103,7 @@ public class  Simulation{
         time = LocalTime.of(5, 0, 0);
         Presimulation.presimualationSetup(game_state);
         simulate();
+        statistics.showStatistics();
     }
 
     public static void main(String[] args) throws IOException, JSONException {

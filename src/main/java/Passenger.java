@@ -1,10 +1,12 @@
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Passenger {
     public Stop end_stop;
     private final Stop start_stop;
-    //public Tram tram_on;
+    public LocalTime spawnTime =null;
+    public LocalTime loadTime = null;
     private final List<Stop> all_stops = new ArrayList<>();
 
     private Stop setFinalStop(){
