@@ -20,7 +20,7 @@ public class Presimulation {
      */
     private static void setSectors() throws IOException, JSONException {
         JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/tram_map.json");
-        ResourceHandler.addSectorsAndStops(arr, game_state.all_sectors, game_state.all_stops);
+        ResourceHandler.addSectorsAndStops(arr, game_state);
     }
 
     /**
@@ -28,7 +28,7 @@ public class Presimulation {
      */
     private static void setTramlines() throws IOException, JSONException{
         JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/tramlines.json");
-        ResourceHandler.addTramlines(arr, game_state.all_tramlines, game_state.all_sectors);
+        ResourceHandler.addTramlines(arr, game_state);
     }
 
     /**
@@ -45,7 +45,7 @@ public class Presimulation {
 
     private static void setRandomEvents() throws IOException, JSONException {
         JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/random_events.json");
-        ResourceHandler.addRandomEvents(arr, game_state.all_possible_events);
+        ResourceHandler.addRandomEvents(arr, game_state);
 
     }
 }
