@@ -60,23 +60,12 @@ public class Tram extends Repairable {
         return false;
     }
 
-<<<<<<< HEAD
-    private void load_passengers(Stop stop, LocalTime time) {
-=======
     private void load_passengers(LocalTime time) {
->>>>>>> 68673447b6a5d0e17c42a18adcee17a23df376ba
         Passenger passenger;
         for (int i = sector_on.stop.passengers_on.size()-1; i >= 0; i--){
             passenger = sector_on.stop.passengers_on.get(i);
-
-<<<<<<< HEAD
-
-            if( can_be_loaded(passenger.end_stop.sector) ){
-                stop.passengers_on.remove(i);
-=======
             if(tramline.stops.contains(passenger.end_stop) ){
                 sector_on.stop.passengers_on.remove(i);
->>>>>>> 68673447b6a5d0e17c42a18adcee17a23df376ba
                 passengers_on.add(passenger);
                 passenger.loadTime=LocalTime.of(time.getHour(),time.getMinute());
                 loaders++;

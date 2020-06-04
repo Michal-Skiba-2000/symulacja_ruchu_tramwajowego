@@ -112,19 +112,6 @@ public class  Simulation{
     private Simulation()  throws IOException, JSONException{
         time = LocalTime.of(5, 0);
         Presimulation.presimualationSetup(gameState);
-/*
-        List<Stop> sss = new ArrayList<>();
-        for(Tramline linechuj: gameState.all_tramlines){
-            for(Stop stopchuj: linechuj.stops){
-                if(!sss.contains(stopchuj)){sss.add(stopchuj);}
-            }
-        }
-        for(Stop stop: gameState.all_stops){
-            if(!sss.contains(stop)) System.out.println("Chuj kurwa cipa");
-        }
-
- */
-
         simulate();
         System.out.println(Integer.toString(Tram.loaders));
         System.out.println(Integer.toString(Tram.dropouts));
