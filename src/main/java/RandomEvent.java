@@ -1,15 +1,15 @@
 public class RandomEvent {
-    public double duration;
-    public double probability;
+    public int duration;
+    public int probability;
 
-    public void setProbability(double input){
+    public void setProbability(int input){
         this.probability=input;
     }
     public void setDuration(int input){
         this.duration=input;
     }
 
-    public RandomEvent(int duration, double probability){
+    public RandomEvent(int duration, int probability){
         this.duration = duration;
         this.probability = probability;
     }

@@ -17,7 +17,7 @@ public class  Simulation{
      * and if any happen set event to tram or sector
      */
     private void resolveRandomEvents(){
-        double probability=Math.round((Math.random()*100))%100;
+        double probability=Math.random()*100;
         int flag=0;
         for(int j = 0; j< gameState.all_possible_events.size()&&flag==0; j++) {
             if(probability< gameState.all_possible_events.get(j).probability) {

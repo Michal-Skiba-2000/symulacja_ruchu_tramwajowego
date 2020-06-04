@@ -1,4 +1,5 @@
 public class Repairable extends ARepairable {
+
     public void repair(){
         if(this.is_active){ return; }
         if (this.random_event != null ){

@@ -34,11 +34,10 @@ public class Statistics {
 
     private void eventsOccured(){
         System.out.println("Total number of events: "+totalNumberOfEvents.size());
-        double howLong=0;
+        int howLong=0;
         for(int i=0;i<totalNumberOfEvents.size();i++){
             howLong+=totalNumberOfEvents.get(i).duration;
-            System.out.println(totalNumberOfEvents.get(i).duration);
         }
-        System.out.println("Total duration of events: "+howLong);
+        System.out.println("Total duration of events: "+howLong+ " minutes ");
     }
 }
