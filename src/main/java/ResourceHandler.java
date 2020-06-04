@@ -1,7 +1,7 @@
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.events.Event;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -30,7 +30,7 @@ public class ResourceHandler {
                 gameState.all_stops.add(stop);
             }
             sector = new Sector(json.getInt("capacity"), stop, id);
-            stop.addSector(sector);
+            Objects.requireNonNull(stop).addSector(sector);
             gameState.all_sectors.add(sector);
         }
     }

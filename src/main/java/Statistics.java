@@ -19,12 +19,12 @@ public class Statistics {
         longestWaiting=totalNumberOfPassengers.get(0).loadTime;
         longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
         longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
-        for (int i = 0; i< totalNumberOfPassengers.size(); i++){
-            LocalTime currentPassenger=totalNumberOfPassengers.get(i).loadTime;
-            currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
-            currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
-            if(longestWaiting.compareTo(currentPassenger)<0){
-                longestWaiting=currentPassenger;
+        for (Passenger totalNumberOfPassenger : totalNumberOfPassengers) {
+            LocalTime currentPassenger = totalNumberOfPassenger.loadTime;
+            currentPassenger = currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
+            currentPassenger = currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
+            if (longestWaiting.compareTo(currentPassenger) < 0) {
+                longestWaiting = currentPassenger;
                 System.out.println(longestWaiting.toString());
             }
         }
@@ -34,8 +34,8 @@ public class Statistics {
     private void eventsOccured(){
         System.out.println("Total number of events: "+totalNumberOfEvents.size());
         int howLong=0;
-        for(int i=0;i<totalNumberOfEvents.size();i++){
-            howLong+=totalNumberOfEvents.get(i).duration;
+        for (RandomEvent totalNumberOfEvent : totalNumberOfEvents) {
+            howLong += totalNumberOfEvent.duration;
         }
         System.out.println("Total duration of events: "+howLong+ " minutes ");
     }

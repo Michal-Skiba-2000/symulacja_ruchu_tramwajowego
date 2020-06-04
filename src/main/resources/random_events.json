@@ -1,27 +1,27 @@
 [
   {
     "nazwa": "karambol",
-    "probability": 0.01,
+    "probability": 1,
     "duration": 60
   },
   {
     "nazwa": "wykolejenie",
-    "probability": 0.05,
+    "probability": 5,
     "duration": 40
   },
   {
     "nazwa": "awaria",
-    "probability": 0.1,
+    "probability":  10,
     "duration": 20
   },
   {
     "nazwa": "stłuczka",
-    "probability": 0.5,
+    "probability": 50,
     "duration": 15
   },
   {
     "nazwa": "korek",
-    "probability": 1,
+    "probability": 100,
     "duration": 5
   }
 

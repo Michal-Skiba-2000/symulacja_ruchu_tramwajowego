@@ -1,6 +1,4 @@
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Passenger {
     public Stop end_stop;

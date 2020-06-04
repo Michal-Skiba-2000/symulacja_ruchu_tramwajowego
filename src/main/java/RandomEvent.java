@@ -1,6 +1,6 @@
 public class RandomEvent {
     public int duration;
-    public int probability;
+    public double probability;
 
     public void setProbability(int input){
         this.probability=input;
@@ -9,7 +9,7 @@ public class RandomEvent {
         this.duration=input;
     }
 
-    public RandomEvent(int duration, int probability){
+    public RandomEvent(int duration, double probability){
         this.duration = duration;
         this.probability = probability;
     }
