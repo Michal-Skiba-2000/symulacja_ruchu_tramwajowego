@@ -1,5 +1,5 @@
 public class RandomEvent {
-    public int duration;
+    public double duration;
     public double probability;
 
     public void setProbability(double input){

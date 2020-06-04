@@ -91,7 +91,6 @@ public class  Simulation{
      * until 23:00
      */
     private void simulate(){
-        // potrzebujemy jakichś struktur w których będziemy zapisywać dane symulacji
         while( !(time.getHour() == 23 && time.getMinute() == 0) ){
             resolveRandomEvents();
             spawnPassengers();

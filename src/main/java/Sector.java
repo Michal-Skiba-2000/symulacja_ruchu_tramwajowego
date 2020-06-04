@@ -30,6 +30,7 @@ public class Sector extends Repairable {
         this.id = id;
     }
 
+
     public Sector(int capacity){
         this.capacity = capacity;
     }
