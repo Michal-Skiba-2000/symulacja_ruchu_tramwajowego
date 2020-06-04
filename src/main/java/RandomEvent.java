@@ -2,7 +2,7 @@ public class RandomEvent {
     public int duration;
     public double probability;
 
-    public void setProbability(double input){
+    public void setProbability(int input){
         this.probability=input;
     }
     public void setDuration(int input){
