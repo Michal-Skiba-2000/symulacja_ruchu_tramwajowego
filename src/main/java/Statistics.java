@@ -15,39 +15,36 @@ public class Statistics {
         eventsOccured();
     }
 
-    private void longestWaitingPassenger(){
-        longestWaiting=totalNumberOfPassengers.get(0).loadTime;
-<<<<<<< HEAD
+    private void longestWaitingPassenger() {
+        longestWaiting = totalNumberOfPassengers.get(0).loadTime;
         longestWaiting.minus(totalNumberOfPassengers.get(0).loadTime.getHour(), ChronoUnit.HOURS);
         longestWaiting.minus(totalNumberOfPassengers.get(0).loadTime.getMinute(), ChronoUnit.MINUTES);
-        for (int i = 0; i< totalNumberOfPassengers.size(); i++){
-            LocalTime currentPassenger=totalNumberOfPassengers.get(i).loadTime;
+        for (int i = 0; i < totalNumberOfPassengers.size(); i++) {
+            LocalTime currentPassenger = totalNumberOfPassengers.get(i).loadTime;
             currentPassenger.minus(totalNumberOfPassengers.get(0).loadTime.getHour(), ChronoUnit.HOURS);
             currentPassenger.minus(totalNumberOfPassengers.get(0).loadTime.getMinute(), ChronoUnit.MINUTES);
-            if(longestWaiting.compareTo(currentPassenger)<0){
-                longestWaiting=currentPassenger;
-=======
-        longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
-        longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
-        for (Passenger totalNumberOfPassenger : totalNumberOfPassengers) {
-            LocalTime currentPassenger = totalNumberOfPassenger.loadTime;
-            currentPassenger = currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
-            currentPassenger = currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
             if (longestWaiting.compareTo(currentPassenger) < 0) {
                 longestWaiting = currentPassenger;
-                System.out.println(longestWaiting.toString());
->>>>>>> 68673447b6a5d0e17c42a18adcee17a23df376ba
+                longestWaiting = longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
+                longestWaiting = longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
+                currentPassenger = currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
+                currentPassenger = currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
+                if (longestWaiting.compareTo(currentPassenger) < 0) {
+                    longestWaiting = currentPassenger;
+                    System.out.println(longestWaiting.toString());
+                }
+            }
+            }
+        System.out.println("The unluckiest passenger waited " + longestWaiting.toString());
+        }
+
+
+            private void eventsOccured(){
+                System.out.println("Total number of events: " + totalNumberOfEvents.size());
+                int howLong = 0;
+                for (RandomEvent totalNumberOfEvent : totalNumberOfEvents) {
+                    howLong += totalNumberOfEvent.duration;
+                }
+                System.out.println("Total duration of events: " + howLong + " minutes ");
             }
         }
-        System.out.println("The unluckiest passenger waited " + longestWaiting.toString());
-    }
-
-    private void eventsOccured(){
-        System.out.println("Total number of events: "+totalNumberOfEvents.size());
-        int howLong=0;
-        for (RandomEvent totalNumberOfEvent : totalNumberOfEvents) {
-            howLong += totalNumberOfEvent.duration;
-        }
-        System.out.println("Total duration of events: "+howLong+ " minutes ");
-    }
-}
