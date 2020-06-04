@@ -24,7 +24,7 @@ public class Statistics {
             LocalTime currentPassenger=totalNumberOfPassengers.get(i).loadTime;
             currentPassenger.minus(totalNumberOfPassengers.get(0).loadTime.getHour(), ChronoUnit.HOURS);
             currentPassenger.minus(totalNumberOfPassengers.get(0).loadTime.getMinute(), ChronoUnit.MINUTES);
-            if(longestWaiting.compareTo(currentPassenger)>0){
+            if(longestWaiting.compareTo(currentPassenger)<0){
                 longestWaiting=currentPassenger;
                 System.out.println(longestWaiting.toString());
             }

@@ -11,7 +11,7 @@ public class  Simulation{
     private GameState gameState = new GameState();
     private Statistics statistics=new Statistics();
 
-    LocalTime time=null;
+    LocalTime time;
     /**
      * Resolve random events from all_possible_events list
      * and if any happen set event to tram or sector
@@ -37,13 +37,13 @@ public class  Simulation{
      */
     private void spawnPassengers() {
         int maxNumberOfPassengers = 0;
-        if(time.getHour()<6)maxNumberOfPassengers=20;
-        if(time.getHour()<9 && time.getHour()>=6)maxNumberOfPassengers=50;
-        if(time.getHour()>=9&&time.getHour()<14)maxNumberOfPassengers=20;
-        if(time.getHour()>=14&&time.getHour()<18)maxNumberOfPassengers=50;
-        if(time.getHour()>=18&&time.getHour()<21)maxNumberOfPassengers=20;
-        if(time.getHour()>=21&&time.getMinute()<30)maxNumberOfPassengers=10;
-        if(time.getHour()>=21&&time.getMinute()>30)maxNumberOfPassengers=5;
+        if(time.getHour()<6)maxNumberOfPassengers=2;
+        if(time.getHour()<9 && time.getHour()>=6)maxNumberOfPassengers=5;
+        if(time.getHour()>=9&&time.getHour()<14)maxNumberOfPassengers=2;
+        if(time.getHour()>=14&&time.getHour()<18)maxNumberOfPassengers=5;
+        if(time.getHour()>=18&&time.getHour()<21)maxNumberOfPassengers=2;
+        if(time.getHour()>=21&&time.getMinute()<30)maxNumberOfPassengers=1;
+        if(time.getHour()>=21&&time.getMinute()>30)maxNumberOfPassengers=1;
 
         if(maxNumberOfPassengers!=0)
         {
@@ -51,7 +51,7 @@ public class  Simulation{
 
             for (int i =0;i<numberOfPassengers;i++) {
                 int start = (int) (Math.round(Math.random() * 100)) % gameState.all_stops.size();
-                Passenger passenger = new Passenger(gameState.all_stops.get(start), gameState.all_stops);
+                Passenger passenger = new Passenger(gameState.all_stops.get(start),gameState);
                 passenger.spawnTime=LocalTime.of(time.getHour(),time.getMinute(),time.getSecond());
                 gameState.all_passengers.add(passenger);
                 statistics.totalNumberOfPassengers.add(passenger);
