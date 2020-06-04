@@ -5,20 +5,19 @@ import java.util.List;
 
 public class Presimulation {
 
-    private static GameState game_state;
+    //private static GameState game_state;
 
-    public static void presimualationSetup(GameState gs) throws IOException, JSONException {
-        game_state = gs;
-        setSectors();
-        setTramlines();
-        spawnTrams();
-        setRandomEvents();
+    public static void presimualationSetup(GameState game_state) throws IOException, JSONException {
+        setSectors(game_state);
+        setTramlines(game_state);
+        spawnTrams(game_state);
+        setRandomEvents(game_state);
     }
 
     /**
      * Set sectors with stops based on prepared map
      */
-    private static void setSectors() throws IOException, JSONException {
+    private static void setSectors(GameState game_state) throws IOException, JSONException {
         JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/tram_map.json");
         ResourceHandler.addSectorsAndStops(arr, game_state);
     }
@@ -26,7 +25,7 @@ public class Presimulation {
     /**
      * Set tramlines based on prepared schedule
      */
-    private static void setTramlines() throws IOException, JSONException{
+    private static void setTramlines(GameState game_state) throws IOException, JSONException{
         JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/tramlines.json");
         ResourceHandler.addTramlines(arr, game_state);
     }
@@ -34,7 +33,7 @@ public class Presimulation {
     /**
      * Spawn trams based on tramlines
      */
-    private static void spawnTrams(){
+    private static void spawnTrams(GameState game_state){
         Tramline tramline;
         for (Tramline all_tramline : game_state.all_tramlines) {
             tramline = all_tramline;
@@ -43,7 +42,7 @@ public class Presimulation {
         }
     }
 
-    private static void setRandomEvents() throws IOException, JSONException {
+    private static void setRandomEvents(GameState game_state) throws IOException, JSONException {
         JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/random_events.json");
         ResourceHandler.addRandomEvents(arr, game_state);
 

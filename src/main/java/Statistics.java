@@ -26,7 +26,6 @@ public class Statistics {
             currentPassenger.minus(totalNumberOfPassengers.get(0).loadTime.getMinute(), ChronoUnit.MINUTES);
             if(longestWaiting.compareTo(currentPassenger)<0){
                 longestWaiting=currentPassenger;
-                System.out.println(longestWaiting.toString());
             }
         }
         System.out.println("The unluckiest passenger waited " + longestWaiting.toString());

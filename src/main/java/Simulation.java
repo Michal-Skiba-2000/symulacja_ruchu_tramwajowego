@@ -2,6 +2,8 @@ import org.json.JSONException;
 
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
   Main class that handles the simulation
@@ -57,9 +59,7 @@ public class  Simulation{
                 gameState.all_stops.get(start).passengers_on.add(passenger);
                 statistics.totalNumberOfPassengers.add(passenger);
             }
-
         }
-
     }
 
     /**
@@ -91,7 +91,6 @@ public class  Simulation{
      * until 23:00
      */
     private void simulate(){
-        // potrzebujemy jakichś struktur w których będziemy zapisywać dane symulacji
         while( !(time.getHour() == 23 && time.getMinute() == 0) ){
             resolveRandomEvents();
             spawnPassengers();
@@ -113,7 +112,22 @@ public class  Simulation{
     private Simulation()  throws IOException, JSONException{
         time = LocalTime.of(5, 0);
         Presimulation.presimualationSetup(gameState);
+/*
+        List<Stop> sss = new ArrayList<>();
+        for(Tramline linechuj: gameState.all_tramlines){
+            for(Stop stopchuj: linechuj.stops){
+                if(!sss.contains(stopchuj)){sss.add(stopchuj);}
+            }
+        }
+        for(Stop stop: gameState.all_stops){
+            if(!sss.contains(stop)) System.out.println("Chuj kurwa cipa");
+        }
+
+ */
+
         simulate();
+        System.out.println(Integer.toString(Tram.loaders));
+        System.out.println(Integer.toString(Tram.dropouts));
         statistics.showStatistics();
     }
 

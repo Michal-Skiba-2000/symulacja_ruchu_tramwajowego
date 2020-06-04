@@ -9,7 +9,11 @@ public class Tramline {
     public int getId(){ return id; }
 
     private void createStopsList(){
-
+        for(Sector sector: sectors){
+            if(sector.stop != null){
+                stops.add(sector.stop);
+            }
+        }
     }
 
     public Tramline(List<Sector> sectors, int id){

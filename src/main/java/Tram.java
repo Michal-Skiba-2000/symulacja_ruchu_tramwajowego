@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tram extends Repairable {
+    public static int loaders = 0;
+    public static int dropouts = 0;
     public Sector sector_on;
     private final Tramline tramline;
     private final List<Passenger> passengers_on = new ArrayList<>();
@@ -43,6 +45,7 @@ public class Tram extends Repairable {
             if (passenger.end_stop == stop) {
                 gameState.all_passengers.remove(passengers_on.get(i));
                 passengers_on.remove(i);
+                dropouts++;
             }
         }
     }
@@ -52,21 +55,22 @@ public class Tram extends Repairable {
             int sector_index = tramline.sectors.indexOf(sector);
             int current_sector_index = tramline.sectors.indexOf(sector_on);
             if(direction == 0 && sector_index < current_sector_index) { return true;}
-            else return direction != 0 && sector_index > current_sector_index;
+            else if( direction != 0 && sector_index > current_sector_index) { return true; }
         }
         return false;
     }
 
     private void load_passengers(Stop stop, LocalTime time) {
-        Stop end_stop;
         Passenger passenger;
         for (int i = stop.passengers_on.size()-1; i >= 0; i--){
             passenger = stop.passengers_on.get(i);
+
 
             if( can_be_loaded(passenger.end_stop.sector) ){
                 stop.passengers_on.remove(i);
                 passengers_on.add(passenger);
                 passenger.loadTime=LocalTime.of(time.getHour(),time.getMinute());
+                loaders++;
             }
         }
     }
