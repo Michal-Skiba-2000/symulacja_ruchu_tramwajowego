@@ -2,6 +2,7 @@ import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
+
 public class Statistics {
     LocalTime longestWaiting=null;
     ArrayList<Passenger> totalNumberOfPassengers=new ArrayList<>();
@@ -31,7 +32,6 @@ public class Statistics {
                 currentPassenger = currentPassenger.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
                 if (longestWaiting.compareTo(currentPassenger) < 0) {
                     longestWaiting = currentPassenger;
-                    System.out.println(longestWaiting.toString());
                 }
             }
             }
@@ -48,3 +48,4 @@ public class Statistics {
                 System.out.println("Total duration of events: " + howLong + " minutes ");
             }
         }
+
