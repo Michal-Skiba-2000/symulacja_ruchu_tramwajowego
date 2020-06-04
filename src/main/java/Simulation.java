@@ -8,8 +8,8 @@ import java.time.LocalTime;
 */
 public class  Simulation{
 
-    private GameState game_state = new GameState();
-    Statistics statistics=new Statistics();
+    private GameState gameState = new GameState();
+    private Statistics statistics=new Statistics();
 
     LocalTime time=null;
     /**
@@ -19,12 +19,12 @@ public class  Simulation{
     private void resolveRandomEvents(){
         double probability=Math.round((Math.random()*100))%100;
         int flag=0;
-        for(int j = 0; j<game_state.all_possible_events.size()&&flag==0; j++) {
-            if(probability< game_state.all_possible_events.get(j).probability) {
-                int sector_id=(int) (Math.round(Math.random()*1000)%game_state.all_sectors.size());
-                game_state.all_sectors.get(sector_id).assignEvent(game_state.all_possible_events.get(j));
-                game_state.sectors_to_repair.add(game_state.all_sectors.get(sector_id));
-                statistics.totalNumberOfEvents.add(game_state.all_possible_events.get(j));
+        for(int j = 0; j< gameState.all_possible_events.size()&&flag==0; j++) {
+            if(probability< gameState.all_possible_events.get(j).probability) {
+                int sector_id=(int) (Math.round(Math.random()*1000)% gameState.all_sectors.size());
+                gameState.all_sectors.get(sector_id).assignEvent(gameState.all_possible_events.get(j));
+                gameState.sectors_to_repair.add(gameState.all_sectors.get(sector_id));
+                statistics.totalNumberOfEvents.add(gameState.all_possible_events.get(j));
 
                 flag=1;
             }
@@ -37,31 +37,36 @@ public class  Simulation{
      */
     private void spawnPassengers() {
         int maxNumberOfPassengers = 0;
-        if(time.getHour()<6)maxNumberOfPassengers=50;
-        if(time.getHour()<9 && time.getHour()>=6)maxNumberOfPassengers=150;
-        if(time.getHour()>=9&&time.getHour()<14)maxNumberOfPassengers=50;
-        if(time.getHour()>=14&&time.getHour()<18)maxNumberOfPassengers=150;
-        if(time.getHour()>=18&&time.getHour()<21)maxNumberOfPassengers=50;
-        if(time.getHour()>=21)maxNumberOfPassengers=30;
+        if(time.getHour()<6)maxNumberOfPassengers=20;
+        if(time.getHour()<9 && time.getHour()>=6)maxNumberOfPassengers=50;
+        if(time.getHour()>=9&&time.getHour()<14)maxNumberOfPassengers=20;
+        if(time.getHour()>=14&&time.getHour()<18)maxNumberOfPassengers=50;
+        if(time.getHour()>=18&&time.getHour()<21)maxNumberOfPassengers=20;
+        if(time.getHour()>=21&&time.getMinute()<30)maxNumberOfPassengers=10;
+        if(time.getHour()>=21&&time.getMinute()>30)maxNumberOfPassengers=5;
 
-        int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
+        if(maxNumberOfPassengers!=0)
+        {
+            int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
 
-        for (int i =0;i<numberOfPassengers;i++) {
-            int start = (int) (Math.round(Math.random() * 100)) % game_state.all_stops.size();
-            Passenger passenger = new Passenger(game_state.all_stops.get(start), game_state.all_stops);
-            passenger.spawnTime=time;
-            game_state.all_passengers.add(passenger);
-            statistics.totalNumberOfPassengers.add(passenger);
+            for (int i =0;i<numberOfPassengers;i++) {
+                int start = (int) (Math.round(Math.random() * 100)) % gameState.all_stops.size();
+                Passenger passenger = new Passenger(gameState.all_stops.get(start), gameState.all_stops);
+                passenger.spawnTime=LocalTime.of(time.getHour(),time.getMinute(),time.getSecond());
+                gameState.all_passengers.add(passenger);
+                statistics.totalNumberOfPassengers.add(passenger);
 
+            }
         }
+
     }
 
     /**
      * Resolve move function on all trams
      */
     private void moveTrams(){
-        for (Tram all_tram : game_state.all_trams) {
-            all_tram.make_move(time);
+        for (Tram all_tram : gameState.all_trams) {
+            all_tram.make_move(time, gameState);
         }
     }
 
@@ -69,12 +74,12 @@ public class  Simulation{
      * Repair all inactive sectors
      */
     private void repairSectors(){
-        if(game_state.sectors_to_repair != null){
+        if(gameState.sectors_to_repair != null){
             Sector sector;
-            for(int i = game_state.sectors_to_repair.size()-1; i >= 0; i--){
-                sector = game_state.sectors_to_repair.get(i);
+            for(int i = gameState.sectors_to_repair.size()-1; i >= 0; i--){
+                sector = gameState.sectors_to_repair.get(i);
                 sector.repair();
-                if(sector.is_active){ game_state.sectors_to_repair.remove(i); }
+                if(sector.is_active){ gameState.sectors_to_repair.remove(i); }
             }
         }
     }
@@ -93,6 +98,10 @@ public class  Simulation{
             repairSectors();
             time = time.plusMinutes(1);
         }
+        for(int i=0;i<gameState.all_passengers.size();i++){
+            gameState.all_passengers.get(i).loadTime=time;
+        }
+        statistics.totalNumberOfUnhandled.addAll(gameState.all_passengers);
     }
 
     /**
@@ -101,7 +110,7 @@ public class  Simulation{
      */
     private Simulation()  throws IOException, JSONException{
         time = LocalTime.of(5, 0, 0);
-        Presimulation.presimualationSetup(game_state);
+        Presimulation.presimualationSetup(gameState);
         simulate();
         statistics.showStatistics();
     }
