@@ -5,7 +5,7 @@ public class Sector extends Repairable {
     public Stop stop;
     public List<Tram> trams_on = new ArrayList<>();
     public List<Sector> connected_sectors = new ArrayList<>();
-    private int capacity;
+    private final int capacity;
     private int id;
 
     public boolean hasSpace(int direction) {

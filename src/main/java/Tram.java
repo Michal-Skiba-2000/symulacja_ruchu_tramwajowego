@@ -52,8 +52,7 @@ public class Tram extends Repairable {
             int sector_index = tramline.sectors.indexOf(sector);
             int current_sector_index = tramline.sectors.indexOf(sector_on);
             if(direction == 0 && sector_index < current_sector_index) { return true;}
-            else if (direction != 0 && sector_index > current_sector_index) { return true; }
-            else return false;
+            else return direction != 0 && sector_index > current_sector_index;
         }
         return false;
     }
@@ -63,12 +62,11 @@ public class Tram extends Repairable {
         Passenger passenger;
         for (int i = stop.passengers_on.size()-1; i >= 0; i--){
             passenger = stop.passengers_on.get(i);
-            end_stop = passenger.end_stop;
 
-            if( can_be_loaded(end_stop.sector) ){
+            if( can_be_loaded(passenger.end_stop.sector) ){
                 stop.passengers_on.remove(i);
                 passengers_on.add(passenger);
-                passenger.loadTime=time;
+                passenger.loadTime=LocalTime.of(time.getHour(),time.getMinute());
             }
         }
     }

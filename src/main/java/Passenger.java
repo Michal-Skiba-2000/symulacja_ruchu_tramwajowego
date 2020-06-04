@@ -7,7 +7,7 @@ public class Passenger {
     private final Stop start_stop;
     public LocalTime spawnTime =null;
     public LocalTime loadTime = null;
-    private GameState gameState;
+    private final GameState gameState;
 
     private Stop setFinalStop(){
         int line = (int) (Math.round(Math.random() * 1000)) % gameState.all_tramlines.size();

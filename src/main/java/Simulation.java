@@ -8,8 +8,8 @@ import java.time.LocalTime;
 */
 public class  Simulation{
 
-    private GameState gameState = new GameState();
-    private Statistics statistics=new Statistics();
+    private final GameState gameState = new GameState();
+    private final Statistics statistics=new Statistics();
 
     LocalTime time;
     /**
@@ -52,11 +52,12 @@ public class  Simulation{
             for (int i =0;i<numberOfPassengers;i++) {
                 int start = (int) (Math.round(Math.random() * 100)) % gameState.all_stops.size();
                 Passenger passenger = new Passenger(gameState.all_stops.get(start),gameState);
-                passenger.spawnTime=LocalTime.of(time.getHour(),time.getMinute(),time.getSecond());
+                passenger.spawnTime=LocalTime.of(time.getHour(),time.getMinute());
                 gameState.all_passengers.add(passenger);
+                gameState.all_stops.get(start).passengers_on.add(passenger);
                 statistics.totalNumberOfPassengers.add(passenger);
-
             }
+
         }
 
     }
@@ -107,9 +108,10 @@ public class  Simulation{
     /**
      * Set default parameters for simulation
      * Start simulating
+     * Show statistics in the end
      */
     private Simulation()  throws IOException, JSONException{
-        time = LocalTime.of(5, 0, 0);
+        time = LocalTime.of(5, 0);
         Presimulation.presimualationSetup(gameState);
         simulate();
         statistics.showStatistics();

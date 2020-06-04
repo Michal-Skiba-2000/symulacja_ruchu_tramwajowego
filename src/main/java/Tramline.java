@@ -4,7 +4,7 @@ import java.util.List;
 public class Tramline {
     public List<Sector> sectors;
     public List<Stop> stops = new ArrayList<>();
-    private int id;
+    private final int id;
 
     public int getId(){ return id; }
 
