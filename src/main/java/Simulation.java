@@ -52,7 +52,7 @@ public class  Simulation{
             int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
 
             for (int i =0;i<numberOfPassengers;i++) {
-                int start = (int) (Math.round(Math.random() * 100)) % gameState.all_stops.size();
+                int start = (int) (Math.round(Math.random() * 10000)) % gameState.all_stops.size();
                 Passenger passenger = new Passenger(gameState.all_stops.get(start),gameState);
                 passenger.spawnTime=LocalTime.of(time.getHour(),time.getMinute());
                 gameState.all_passengers.add(passenger);

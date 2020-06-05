@@ -42,8 +42,8 @@ public class Statistics {
             private void eventsOccured(GameState gameState){
                 System.out.println("Total number of events: " + totalNumberOfEvents.size()+".");
                 int[] eventsId = new int[5];
-                for(int i=0;i<totalNumberOfEvents.size();i++){
-                    eventsId[totalNumberOfEvents.get(i).id-1]++;
+                for (RandomEvent numberOfEvent : totalNumberOfEvents) {
+                    eventsId[numberOfEvent.id - 1]++;
                 }
 
                 for (int i = 0; i<5; i++){
