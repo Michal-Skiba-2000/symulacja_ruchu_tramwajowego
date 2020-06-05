@@ -41,8 +41,6 @@ public class  Simulation{
         if(x<18) maxNumberOfPassengers = (int) Math.round(-(x-6)*(x-9)*(x-14)*(x-18)/50+8);
         else maxNumberOfPassengers= (int) (1.0*11/(x-16)-1.5);
 
-
-        System.out.println(maxNumberOfPassengers);
         if(maxNumberOfPassengers!=0)
         {
             int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
