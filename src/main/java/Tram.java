@@ -34,7 +34,7 @@ public class Tram extends Repairable {
     }
 
     private boolean check_if_active(Sector sector){
-        if( is_active ){ repair(); }
+        if( !is_active ){ repair(); }
         return is_active && sector.is_active;
     }
 
@@ -55,7 +55,7 @@ public class Tram extends Repairable {
             int sector_index = tramline.sectors.indexOf(sector);
             int current_sector_index = tramline.sectors.indexOf(sector_on);
             if(direction == 0 && sector_index < current_sector_index) { return true;}
-            else if( direction != 0 && sector_index > current_sector_index) { return true; }
+            else return direction != 0 && sector_index > current_sector_index;
         }
         return false;
     }
@@ -76,7 +76,10 @@ public class Tram extends Repairable {
     public void make_move(LocalTime time,GameState gameState){
         Sector move_on_sector = get_sector_to_move_on();
         if( !check_if_active(move_on_sector) ){ return; }
-        if( !move_on_sector.hasSpace(direction) ){ return; }
+        //if( !move_on_sector.hasSpace(direction) ){ return; }
+        sector_on.trams_on.remove(this);
+        sector_on = move_on_sector;
+        sector_on.trams_on.add(this);
         sector_on = move_on_sector;
         if( sector_on.hasStop() ){
             leave_passengers(gameState);

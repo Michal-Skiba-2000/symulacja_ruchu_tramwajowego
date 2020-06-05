@@ -36,15 +36,13 @@ public class  Simulation{
      * Spawn passengers on trams based on time
      */
     private void spawnPassengers() {
-        int maxNumberOfPassengers = 0;
-        if(time.getHour()<6)maxNumberOfPassengers=2;
-        if(time.getHour()<9 && time.getHour()>=6)maxNumberOfPassengers=5;
-        if(time.getHour()>=9&&time.getHour()<14)maxNumberOfPassengers=2;
-        if(time.getHour()>=14&&time.getHour()<18)maxNumberOfPassengers=5;
-        if(time.getHour()>=18&&time.getHour()<21)maxNumberOfPassengers=2;
-        if(time.getHour()>=21&&time.getMinute()<30)maxNumberOfPassengers=1;
-        if(time.getHour()>=21&&time.getMinute()>30)maxNumberOfPassengers=1;
+        double x=time.getHour()+(1.0*time.getMinute()/60);
+        int maxNumberOfPassengers;
+        if(x<18) maxNumberOfPassengers = (int) Math.round(-(x-6)*(x-9)*(x-14)*(x-18)/50+8);
+        else maxNumberOfPassengers= (int) (1.0*11/(x-16)-1.5);
 
+
+        System.out.println(maxNumberOfPassengers);
         if(maxNumberOfPassengers!=0)
         {
             int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
@@ -92,10 +90,8 @@ public class  Simulation{
         while( !(time.getHour() == 23 && time.getMinute() == 0) ){
             resolveRandomEvents();
             spawnPassengers();
-            System.out.println(gameState.all_trams.get(10).sector_on.getId());
             moveTrams();
             repairSectors();
-            System.out.println("============");
             time = time.plusMinutes(1);
         }
         for(int i=0;i<gameState.all_passengers.size();i++){
