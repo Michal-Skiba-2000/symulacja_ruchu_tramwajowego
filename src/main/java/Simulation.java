@@ -113,9 +113,7 @@ public class  Simulation{
         time = LocalTime.of(5, 0);
         Presimulation.presimualationSetup(gameState);
         simulate();
-        System.out.println(Integer.toString(Tram.loaders));
-        System.out.println(Integer.toString(Tram.dropouts));
-        statistics.showStatistics();
+        statistics.showStatistics(gameState);
     }
 
     public static void main(String[] args) throws IOException, JSONException {

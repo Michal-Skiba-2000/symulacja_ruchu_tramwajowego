@@ -1,26 +1,31 @@
 [
   {
-    "nazwa": "karambol",
+    "id": 1,
+    "name": "crackup",
     "probability": 1,
     "duration": 60
   },
   {
-    "nazwa": "wykolejenie",
+    "id": 2,
+    "name": "derailment",
     "probability": 5,
     "duration": 40
   },
   {
-    "nazwa": "awaria",
+    "id": 3,
+    "name": "accident",
     "probability":  10,
     "duration": 20
   },
   {
-    "nazwa": "stłuczka",
+    "id": 4,
+    "name": "bump",
     "probability": 50,
     "duration": 15
   },
   {
-    "nazwa": "korek",
+    "id": 5,
+    "name": "traffic jam",
     "probability": 100,
     "duration": 5
   }

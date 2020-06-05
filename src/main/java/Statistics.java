@@ -9,11 +9,11 @@ public class Statistics {
     ArrayList<RandomEvent> totalNumberOfEvents=new ArrayList<>();
     ArrayList<Passenger> totalNumberOfUnhandled=new ArrayList<>();
 
-    public void showStatistics(){
-        System.out.println("Total numer of passengers today: "+ totalNumberOfPassengers.size());
-        System.out.println("Total number of unhandled passengers today: "+totalNumberOfUnhandled.size());
+    public void showStatistics(GameState gameState){
+        System.out.println("Total numer of passengers today: "+ totalNumberOfPassengers.size()+".");
+        System.out.println("Total number of unhandled passengers today: "+totalNumberOfUnhandled.size()+".");
         longestWaitingPassenger();
-        eventsOccured();
+        eventsOccured(gameState);
     }
 
     private void longestWaitingPassenger() {
@@ -35,17 +35,28 @@ public class Statistics {
                 }
             }
             }
-        System.out.println("The unluckiest passenger waited " + longestWaiting.toString());
+        System.out.println("The unluckiest passenger waited " + longestWaiting.toString()+".");
         }
 
 
-            private void eventsOccured(){
-                System.out.println("Total number of events: " + totalNumberOfEvents.size());
+            private void eventsOccured(GameState gameState){
+                System.out.println("Total number of events: " + totalNumberOfEvents.size()+".");
+                int[] eventsId = new int[5];
+                for(int i=0;i<totalNumberOfEvents.size();i++){
+                    eventsId[totalNumberOfEvents.get(i).id-1]++;
+                }
+
+                for (int i = 0; i<5; i++){
+                    if(eventsId[i]!=0)
+                        System.out.println("Event "+gameState.all_possible_events.get(i).name +" occured "+ eventsId[i]+" times.");
+                }
+
                 int howLong = 0;
                 for (RandomEvent totalNumberOfEvent : totalNumberOfEvents) {
                     howLong += totalNumberOfEvent.duration;
                 }
-                System.out.println("Total duration of events: " + howLong + " minutes ");
+                System.out.println("Total delay cause by events: " + howLong + " minutes. ");
+
             }
         }
 

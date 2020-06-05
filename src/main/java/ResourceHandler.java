@@ -69,13 +69,16 @@ public class ResourceHandler {
     public static void addRandomEvents(JSONArray arr,GameState gameState) throws JSONException {
         JSONObject json;
         int duration;
+        String name;
+        int id;
         int probability;
         for(int i = 0; i < arr.length(); i++){
             json = arr.getJSONObject(i);
-
+            name=json.getString("name");
+            id=json.getInt("id");
             duration = json.getInt("duration");
             probability = json.getInt("probability");
-            gameState.all_possible_events.add(new RandomEvent(duration, probability));
+            gameState.all_possible_events.add(new RandomEvent(duration, probability,name,id));
         }
     }
 }
