@@ -79,7 +79,6 @@ public class Tram extends Repairable {
         if( !move_on_sector.hasSpace(direction) ){ return; }
         sector_on = move_on_sector;
         if( sector_on.hasStop() ){
-            Stop stop = sector_on.stop;
             leave_passengers(gameState);
             load_passengers(time);
         }

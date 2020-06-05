@@ -2,8 +2,6 @@ import org.json.JSONException;
 
 import java.io.IOException;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
   Main class that handles the simulation
@@ -94,8 +92,10 @@ public class  Simulation{
         while( !(time.getHour() == 23 && time.getMinute() == 0) ){
             resolveRandomEvents();
             spawnPassengers();
+            System.out.println(gameState.all_trams.get(10).sector_on.getId());
             moveTrams();
             repairSectors();
+            System.out.println("============");
             time = time.plusMinutes(1);
         }
         for(int i=0;i<gameState.all_passengers.size();i++){

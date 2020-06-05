@@ -9,7 +9,7 @@ public class Passenger {
 
     private Stop setFinalStop(){
         Stop endstop = null;
-        int line = (int) (Math.round(Math.random() * 1000)) % gameState.all_tramlines.size();
+        int line = (int) (Math.round(Math.random() * 10000)) % gameState.all_tramlines.size();
         if(gameState.all_tramlines.get(line).stops.contains(start_stop)){
             int rand = (int) (Math.round(Math.random() * 1000)) % gameState.all_tramlines.get(line).stops.size();
             endstop=gameState.all_tramlines.get(line).stops.get(rand);
