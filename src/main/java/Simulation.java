@@ -2,6 +2,8 @@ import org.json.JSONException;
 
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
   Main class that handles the simulation

@@ -1,5 +1,9 @@
 public class Repairable extends ARepairable {
-
+    /**
+     * Handle self repairing.
+     * Reduce time_to_repair by one
+     * and set is_active to true if the object is repaired
+     */
     public void repair(){
         if(this.is_active){ return; }
         if (this.random_event != null ){
@@ -12,6 +16,10 @@ public class Repairable extends ARepairable {
         }
     }
 
+    /**
+     * Assign event to the object and inactivate the object
+     * @param event
+     */
     public void assignEvent(RandomEvent event){
         this.random_event = event;
         this.is_active = false;
