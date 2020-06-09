@@ -17,17 +17,20 @@ public class Statistics {
     }
 
     private void longestWaitingPassenger() {
+        LocalTime currentPassenger = null;
         longestWaiting = totalNumberOfPassengers.get(0).loadTime;
         longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
         longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
         for (int i = 0; i < totalNumberOfPassengers.size(); i++) {
-            LocalTime currentPassenger = totalNumberOfPassengers.get(i).loadTime;
-            currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(i).spawnTime.getHour(), ChronoUnit.HOURS);
-            currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(i).spawnTime.getMinute(), ChronoUnit.MINUTES);
-            if (longestWaiting.compareTo(currentPassenger) < 0) {
-                longestWaiting = currentPassenger;
+            if(totalNumberOfPassengers.get(i) != null){
+                currentPassenger = totalNumberOfPassengers.get(i).loadTime;
+                currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(i).spawnTime.getHour(), ChronoUnit.HOURS);
+                currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(i).spawnTime.getMinute(), ChronoUnit.MINUTES);
+                if (longestWaiting.compareTo(currentPassenger) < 0) {
+                    longestWaiting = currentPassenger;
+                }
             }
-            }
+        }
         System.out.println("The unluckiest passenger waited " + longestWaiting.toString()+".");
     }
 

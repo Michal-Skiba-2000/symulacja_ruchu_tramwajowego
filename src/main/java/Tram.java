@@ -76,8 +76,8 @@ public class Tram extends Repairable {
         if(tramline.sectors.contains(passenger.end_stop.sector)){
             int sector_index = tramline.sectors.indexOf(passenger.end_stop.sector);
             int current_sector_index = tramline.sectors.indexOf(sector_on);
-            if(direction == 0 && sector_index < current_sector_index) { return true;}
-            else if (direction != 0 && sector_index > current_sector_index) {return true;}
+            if(direction == 0 && sector_index < current_sector_index) { return true; }
+            else if(direction != 0 && sector_index > current_sector_index) { return true; }
         }
         return false;
     }
@@ -91,16 +91,18 @@ public class Tram extends Repairable {
      * @param gameState GameState object to track time of loading passenger
      */
     private void load_passengers(LocalTime time,GameState gameState) {
-        Passenger passenger;
-        for (int i = sector_on.stop.passengers_on.size()-1; i >= 0; i--){
-            passenger = sector_on.stop.passengers_on.get(i);
-            if(can_be_loaded(passenger)){
-                sector_on.stop.passengers_on.remove(i);
+        List<Passenger> passengers_to_remove = new ArrayList<>();
+        for (Passenger passenger: sector_on.stop.passengers_on){
+            if(tramline.sectors.contains(passenger.end_stop.sector)){
+                passengers_to_remove.add(passenger);
                 passengers_on.add(passenger);
                 gameState.all_passengers.remove(passenger);
                 passenger.loadTime=LocalTime.of(time.getHour(),time.getMinute());
             }
         }
+
+        sector_on.stop.passengers_on.removeAll(passengers_to_remove);
+
     }
 
     /**
@@ -119,8 +121,8 @@ public class Tram extends Repairable {
         sector_on = move_on_sector;
         sector_on.trams_on.add(this);
         if( sector_on.hasStop() ){
-            leave_passengers(gameState);
             load_passengers(time,gameState);
+            leave_passengers(gameState);
         }
     }
 

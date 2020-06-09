@@ -18,7 +18,11 @@ public class Passenger {
         return endstop;
     }
 
-    public Passenger(Stop start_stop,GameState gs){
+    public Stop getStartStop() {
+        return start_stop;
+    }
+
+    public Passenger(Stop start_stop, GameState gs){
         gameState=gs;
         this.start_stop = start_stop;
         start_stop.passengers_on.add(this);
