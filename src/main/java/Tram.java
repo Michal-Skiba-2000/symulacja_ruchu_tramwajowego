@@ -43,7 +43,6 @@ public class Tram extends Repairable {
         for (int i = passengers_on.size() - 1; i >= 0; i--) {
             passenger = passengers_on.get(i);
             if (passenger.end_stop == sector_on.stop) {
-                gameState.all_passengers.remove(passengers_on.get(i));
                 passengers_on.remove(i);
                 dropouts++;
             }
@@ -60,13 +59,14 @@ public class Tram extends Repairable {
         return false;
     }
 
-    private void load_passengers(LocalTime time) {
+    private void load_passengers(LocalTime time,GameState gameState) {
         Passenger passenger;
         for (int i = sector_on.stop.passengers_on.size()-1; i >= 0; i--){
             passenger = sector_on.stop.passengers_on.get(i);
             if(tramline.stops.contains(passenger.end_stop) ){
                 sector_on.stop.passengers_on.remove(i);
                 passengers_on.add(passenger);
+                gameState.all_passengers.remove(passenger);
                 passenger.loadTime=LocalTime.of(time.getHour(),time.getMinute());
                 loaders++;
             }
@@ -83,7 +83,7 @@ public class Tram extends Repairable {
         sector_on = move_on_sector;
         if( sector_on.hasStop() ){
             leave_passengers(gameState);
-            load_passengers(time);
+            load_passengers(time,gameState);
         }
     }
 
