@@ -6,6 +6,7 @@ public abstract class ARepairable {
     public abstract void repair();
     public abstract void assignEvent(RandomEvent event);
 
+
     protected ARepairable(){
         this.is_active = true;
         this.time_to_repair = 0;
