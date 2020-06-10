@@ -16,16 +16,17 @@ public class Statistics {
         eventsOccured(gameState);
     }
 
+
     private void longestWaitingPassenger() {
-        LocalTime currentPassenger = null;
+        LocalTime currentPassenger;
         longestWaiting = totalNumberOfPassengers.get(0).loadTime;
         longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getHour(), ChronoUnit.HOURS);
         longestWaiting=longestWaiting.minus(totalNumberOfPassengers.get(0).spawnTime.getMinute(), ChronoUnit.MINUTES);
-        for (int i = 0; i < totalNumberOfPassengers.size(); i++) {
-            if(totalNumberOfPassengers.get(i) != null){
-                currentPassenger = totalNumberOfPassengers.get(i).loadTime;
-                currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(i).spawnTime.getHour(), ChronoUnit.HOURS);
-                currentPassenger=currentPassenger.minus(totalNumberOfPassengers.get(i).spawnTime.getMinute(), ChronoUnit.MINUTES);
+        for (Passenger totalNumberOfPassenger : totalNumberOfPassengers) {
+            if (totalNumberOfPassenger != null) {
+                currentPassenger = totalNumberOfPassenger.loadTime;
+                currentPassenger = currentPassenger.minus(totalNumberOfPassenger.spawnTime.getHour(), ChronoUnit.HOURS);
+                currentPassenger = currentPassenger.minus(totalNumberOfPassenger.spawnTime.getMinute(), ChronoUnit.MINUTES);
                 if (longestWaiting.compareTo(currentPassenger) < 0) {
                     longestWaiting = currentPassenger;
                 }

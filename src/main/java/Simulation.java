@@ -2,8 +2,6 @@ import org.json.JSONException;
 
 import java.io.IOException;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
   Main class that handles the simulation
@@ -40,8 +38,10 @@ public class  Simulation{
     private void spawnPassengers() {
         double x=time.getHour()+(1.0*time.getMinute()/60);
         int maxNumberOfPassengers;
-        if(x<18) maxNumberOfPassengers = (int) Math.round(-(x-6)*(x-9)*(x-14)*(x-18)/50+8);
-        else maxNumberOfPassengers= (int) (1.0*11/(x-16)-1.5);
+        if(x<18) maxNumberOfPassengers = (int) Math.round(-5*(x-6)*(x-9)*(x-14)*(x-18)/50+8);
+        else maxNumberOfPassengers= (int) (5.0*11/(x-16)-1.5);
+
+        if(maxNumberOfPassengers<0)maxNumberOfPassengers=0;
 
         if(maxNumberOfPassengers!=0)
         {
@@ -50,7 +50,6 @@ public class  Simulation{
             for (int i =0;i<numberOfPassengers;i++) {
                 int start = (int) (Math.round(Math.random() * 10000)) % gameState.all_stops.size();
                 Passenger passenger = new Passenger(gameState.all_stops.get(start),gameState);
-                //System.out.println(i);
                 passenger.spawnTime=LocalTime.of(time.getHour(),time.getMinute());
                 gameState.all_passengers.add(passenger);
                 gameState.all_stops.get(start).passengers_on.add(passenger);
