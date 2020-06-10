@@ -25,18 +25,18 @@ public class ResourceHandler {
             json = arr.getJSONObject(i);
             id = json.getInt("id");
             stop_name = json.getString("stop");
-            if (id != 374) {
-                if (!stop_name.equals("null")) {
-                    stop = new Stop(stop_name);
-                    gameState.all_stops.add(stop);
-                }
-                sector = new Sector(json.getInt("capacity"), stop, id);
-                if (stop != null) {
-                    stop.addSector(sector);
-                }
-                stop = null;
-                gameState.all_sectors.add(sector);
+
+            if (!stop_name.equals("null")) {
+                stop = new Stop(stop_name);
+                gameState.all_stops.add(stop);
             }
+            sector = new Sector(json.getInt("capacity"), stop, id);
+            if (stop != null) {
+                stop.addSector(sector);
+            }
+            stop = null;
+            gameState.all_sectors.add(sector);
+
         }
     }
 
