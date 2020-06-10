@@ -9,6 +9,10 @@ public class Statistics {
     ArrayList<RandomEvent> totalNumberOfEvents=new ArrayList<>();
     ArrayList<Passenger> totalNumberOfUnhandled=new ArrayList<>();
 
+    /**
+     * Show in the terminal window statistics for current simulation
+     * @param gameState current game state
+     */
     public void showStatistics(GameState gameState){
         System.out.println("Total numer of passengers today: "+ totalNumberOfPassengers.size()+".");
         System.out.println("Total number of unhandled passengers today: "+totalNumberOfUnhandled.size()+".");
@@ -16,7 +20,10 @@ public class Statistics {
         eventsOccured(gameState);
     }
 
-
+    /**
+     * Calculate longest waiting time
+     * based on spawnTime and loadTime of passengers
+     */
     private void longestWaitingPassenger() {
         LocalTime currentPassenger;
         longestWaiting = totalNumberOfPassengers.get(0).loadTime;
@@ -35,7 +42,10 @@ public class Statistics {
         System.out.println("The unluckiest passenger waited " + longestWaiting.toString()+".");
     }
 
-
+    /**
+     * Counts events and total duration
+     * @param gameState current game state
+     */
     private void eventsOccured(GameState gameState){
         System.out.println("Total number of events: " + totalNumberOfEvents.size()+".");
         int[] eventsId = new int[5];

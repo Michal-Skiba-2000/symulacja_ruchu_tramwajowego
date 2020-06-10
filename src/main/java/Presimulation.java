@@ -47,6 +47,9 @@ public class Presimulation {
         }
     }
 
+    /**
+     * Set events based on prepared data
+     */
     private static void setRandomEvents(GameState gameState) throws IOException, JSONException {
         JSONArray arr = ResourceHandler.getJSONArrayFromFile("src/main/resources/random_events.json");
         ResourceHandler.addRandomEvents(arr, gameState);

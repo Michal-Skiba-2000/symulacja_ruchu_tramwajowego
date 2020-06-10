@@ -7,6 +7,11 @@ public class Passenger {
     public LocalTime loadTime = null;
     private final GameState gameState;
 
+    /**
+     * Returns randomize objct endstop which is contained,
+     * by tramline that stops on start_stop.
+     * @return endstop
+     */
     private Stop setFinalStop(){
         Stop endstop = null;
         int line = (int) (Math.round(Math.random() * 10000)) % gameState.all_tramlines.size();
@@ -18,9 +23,18 @@ public class Passenger {
         return endstop;
     }
 
+    /**
+     * @return start_stop
+     */
+
     public Stop getStartStop() {
         return start_stop;
     }
+
+    /**
+     * @param start_stop starting point randomized by Simulation
+     * @param gs current game state
+     */
 
     public Passenger(Stop start_stop, GameState gs){
         gameState=gs;
