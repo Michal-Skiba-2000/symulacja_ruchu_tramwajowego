@@ -4,7 +4,6 @@ import java.util.List;
 public class Sector extends Repairable {
     public Stop stop;
     public List<Tram> trams_on = new ArrayList<>();
-    public List<Sector> connected_sectors = new ArrayList<>();
     private final int capacity;
     private int id;
 
@@ -15,7 +14,7 @@ public class Sector extends Repairable {
     public boolean hasSpace(int direction) {
         int count = 0;
         for (Tram tram : trams_on) {
-            if (tram.get_direction() == direction) {
+            if (tram.getDirection() == direction) {
                 count++;
             }
         }

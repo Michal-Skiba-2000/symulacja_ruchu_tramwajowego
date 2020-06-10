@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class ResourceHandler {
-    private static List<RandomEvent> Events;
 
     public static JSONArray getJSONArrayFromFile(String filename) throws IOException, JSONException {
         String content = new String(Files.readAllBytes(Paths.get(filename)));

@@ -4,8 +4,6 @@ import java.io.IOException;
 
 public class Presimulation {
 
-    //private static GameState game_state;
-
     public static void presimualationSetup(GameState gameState) throws IOException, JSONException {
         setSectors(gameState);
         setTramlines(gameState);

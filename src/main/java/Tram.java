@@ -16,7 +16,7 @@ public class Tram extends Repairable {
      *
      * @return the Sector object that the tram is moving on
      */
-    private Sector get_sector_to_move_on(){
+    private Sector geSectorToMoveOn(){
         int index_of_sector = tramline.sectors.indexOf(sector_on);
         Sector move_on_sector;
 
@@ -47,7 +47,7 @@ public class Tram extends Repairable {
      * @param sector    the Sector object that tram is moving on
      * @return          the boolean value that specify if move is valid
      */
-    private boolean check_if_active(Sector sector){
+    private boolean checkIfActive(Sector sector){
         if( !is_active ){ repair(); }
         return is_active && sector.is_active;
     }
@@ -56,9 +56,8 @@ public class Tram extends Repairable {
      * Iterates trough passengers_on and removes from list
      * those whose end_stop is current stop
      *
-     * @param gameState
      */
-    private void leave_passengers(GameState gameState) {
+    private void leavePassengers() {
         Passenger passenger;
         for (int i = passengers_on.size() - 1; i >= 0; i--) {
             passenger = passengers_on.get(i);
@@ -69,20 +68,6 @@ public class Tram extends Repairable {
     }
 
     /**
-     * @param passenger Passenger object that is considered to be loaded
-     * @return          the boolean value that specify if passenger can be loaded
-     */
-    private boolean can_be_loaded(Passenger passenger){
-        if(tramline.sectors.contains(passenger.end_stop.sector)){
-            int sector_index = tramline.sectors.indexOf(passenger.end_stop.sector);
-            int current_sector_index = tramline.sectors.indexOf(sector_on);
-            if(direction == 0 && sector_index < current_sector_index) { return true; }
-            else if(direction != 0 && sector_index > current_sector_index) { return true; }
-        }
-        return false;
-    }
-
-    /**
      * Iterates through passengers on current stop,
      * loads those who can achieve their destination with this tram
      * and save the time of loading to gameState
@@ -90,7 +75,7 @@ public class Tram extends Repairable {
      * @param time      LocalTime object that specifies current time in simulation
      * @param gameState GameState object to track time of loading passenger
      */
-    private void load_passengers(LocalTime time,GameState gameState) {
+    private void loadPassengers(LocalTime time,GameState gameState) {
         List<Passenger> passengers_to_remove = new ArrayList<>();
         for (Passenger passenger: sector_on.stop.passengers_on){
             if(tramline.sectors.contains(passenger.end_stop.sector)){
@@ -113,23 +98,23 @@ public class Tram extends Repairable {
      * @param time      LocalTime object that specifies current time in simulation
      * @param gameState GameState object to track time of loading passenger
      */
-    public void make_move(LocalTime time,GameState gameState){
-        Sector move_on_sector = get_sector_to_move_on();
-        if( !check_if_active(move_on_sector) ){ return; }
+    public void makeMove(LocalTime time,GameState gameState){
+        Sector move_on_sector = geSectorToMoveOn();
+        if( !checkIfActive(move_on_sector) ){ return; }
         if( !move_on_sector.hasSpace(direction) ){ return; }
         sector_on.trams_on.remove(this);
         sector_on = move_on_sector;
         sector_on.trams_on.add(this);
         if( sector_on.hasStop() ){
-            load_passengers(time,gameState);
-            leave_passengers(gameState);
+            loadPassengers(time,gameState);
+            leavePassengers();
         }
     }
 
     /**
      * @return current direction of tram
      */
-    public int get_direction(){ return direction; }
+    public int getDirection(){ return direction; }
 
     /**
      * @param tramline  specify the Tramline object that the tram is on

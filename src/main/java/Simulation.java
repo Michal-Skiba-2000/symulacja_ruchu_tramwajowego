@@ -63,7 +63,7 @@ public class  Simulation{
      */
     private void moveTrams(){
         for (Tram all_tram : gameState.all_trams) {
-            all_tram.make_move(time, gameState);
+            all_tram.makeMove(time, gameState);
         }
     }
 
