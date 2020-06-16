@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameState {
-    List<Tram> all_trams = new ArrayList<>();
-    List<Sector> all_sectors = new ArrayList<>();
-    List<Sector> sectors_to_repair = new ArrayList<>();
-    List<RandomEvent> all_possible_events = new ArrayList<>();
-    List<Tramline> all_tramlines = new ArrayList<>();
-    List<Passenger> all_passengers = new ArrayList<>();
-    List<Stop> all_stops = new ArrayList<>();
+    List<Tram> allTrams = new ArrayList<>();
+    List<Sector> allSectors = new ArrayList<>();
+    List<Sector> sectorsToRepair = new ArrayList<>();
+    List<RandomEvent> allPossibleEvents = new ArrayList<>();
+    List<Tramline> allTramlines = new ArrayList<>();
+    List<Passenger> allPassengers = new ArrayList<>();
+    List<Stop> allStops = new ArrayList<>();
 }

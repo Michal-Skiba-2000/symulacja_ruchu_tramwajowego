@@ -55,7 +55,7 @@ public class Statistics {
 
         for (int i = 0; i<5; i++){
             if(eventsId[i]!=0)
-                System.out.println("Event "+gameState.all_possible_events.get(i).name +" occured "+ eventsId[i]+" times.");
+                System.out.println("Event "+gameState.allPossibleEvents.get(i).name +" occured "+ eventsId[i]+" times.");
         }
 
         int howLong = 0;

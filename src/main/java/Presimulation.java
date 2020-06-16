@@ -33,15 +33,15 @@ public class Presimulation {
     private static void spawnTrams(GameState gameState){
         Sector sector;
         int size;
-        for (Tramline tramline : gameState.all_tramlines) {
+        for (Tramline tramline : gameState.allTramlines) {
             size = tramline.sectors.size();
             sector = tramline.sectors.get(size-1);
-            gameState.all_trams.add(new Tram(tramline, 0, sector));
+            gameState.allTrams.add(new Tram(tramline, 0, sector));
             sector = tramline.sectors.get(0);
-            gameState.all_trams.add(new Tram(tramline, 1, sector));
+            gameState.allTrams.add(new Tram(tramline, 1, sector));
             sector = tramline.sectors.get((int) size/2);
-            gameState.all_trams.add(new Tram(tramline, 0, sector));
-            gameState.all_trams.add(new Tram(tramline, 1, sector));
+            gameState.allTrams.add(new Tram(tramline, 0, sector));
+            gameState.allTrams.add(new Tram(tramline, 1, sector));
         }
     }
 

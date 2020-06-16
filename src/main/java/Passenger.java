@@ -1,8 +1,8 @@
 import java.time.LocalTime;
 
 public class Passenger {
-    public Stop end_stop;
-    private final Stop start_stop;
+    public Stop endStop;
+    private final Stop startStop;
     public LocalTime spawnTime =null;
     public LocalTime loadTime = null;
     private final GameState gameState;
@@ -13,22 +13,14 @@ public class Passenger {
      * @return endstop
      */
     private Stop setFinalStop(){
-        Stop endstop = null;
-        int line = (int) (Math.round(Math.random() * 10000)) % gameState.all_tramlines.size();
-        if(gameState.all_tramlines.get(line).stops.contains(start_stop)){
-            int rand = (int) (Math.round(Math.random() * 1000)) % gameState.all_tramlines.get(line).stops.size();
-            endstop=gameState.all_tramlines.get(line).stops.get(rand);
+        Stop stop = null;
+        int line = (int) (Math.round(Math.random() * 10000)) % gameState.allTramlines.size();
+        if(gameState.allTramlines.get(line).stops.contains(startStop)){
+            int rand = (int) (Math.round(Math.random() * 1000)) % gameState.allTramlines.get(line).stops.size();
+            stop=gameState.allTramlines.get(line).stops.get(rand);
         }
 
-        return endstop;
-    }
-
-    /**
-     * @return start_stop
-     */
-
-    public Stop getStartStop() {
-        return start_stop;
+        return stop;
     }
 
     /**
@@ -38,10 +30,10 @@ public class Passenger {
 
     public Passenger(Stop start_stop, GameState gs){
         gameState=gs;
-        this.start_stop = start_stop;
-        start_stop.passengers_on.add(this);
+        this.startStop = start_stop;
+        start_stop.passengersOn.add(this);
         do{
-            this.end_stop = setFinalStop();
-        }while(this.end_stop==start_stop || this.end_stop == null );
+            this.endStop = setFinalStop();
+        }while(this.endStop==start_stop || this.endStop == null );
     }
 }

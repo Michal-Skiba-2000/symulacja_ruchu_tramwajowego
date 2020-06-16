@@ -29,25 +29,25 @@ public class ResourceHandler {
      */
     public static void addSectorsAndStops(JSONArray arr,GameState gameState) throws JSONException {
         JSONObject json;
-        String stop_name;
+        String stopName;
         Stop stop = null;
         Sector sector;
         int id;
         for(int i = 0; i < arr.length(); i++){
             json = arr.getJSONObject(i);
             id = json.getInt("id");
-            stop_name = json.getString("stop");
+            stopName = json.getString("stop");
 
-            if (!stop_name.equals("null")) {
-                stop = new Stop(stop_name);
-                gameState.all_stops.add(stop);
+            if (!stopName.equals("null")) {
+                stop = new Stop(stopName);
+                gameState.allStops.add(stop);
             }
             sector = new Sector(json.getInt("capacity"), stop, id);
             if (stop != null) {
                 stop.addSector(sector);
             }
             stop = null;
-            gameState.all_sectors.add(sector);
+            gameState.allSectors.add(sector);
 
         }
     }
@@ -60,15 +60,15 @@ public class ResourceHandler {
      */
     public static void addTramlines(JSONArray arr,GameState gameState) throws JSONException {
         JSONObject json;
-        JSONArray route_arr;
-        List<Sector> tramline_sectors;
+        JSONArray routeArr;
+        List<Sector> tramlineSectors;
         int id;
         for(int i = 0; i < arr.length(); i++){
             json = arr.getJSONObject(i);
-            route_arr = json.getJSONArray("route");
-            tramline_sectors = getTramlineSectors(route_arr, gameState);
+            routeArr = json.getJSONArray("route");
+            tramlineSectors = getTramlineSectors(routeArr, gameState);
             id = json.getInt("id");
-            gameState.all_tramlines.add(new Tramline(tramline_sectors, id));
+            gameState.allTramlines.add(new Tramline(tramlineSectors));
         }
     }
 
@@ -86,11 +86,10 @@ public class ResourceHandler {
         int index, j;
         for(int i = 0; i < arr.length(); i++){
             index = arr.getInt(i);
-
             sector = null;
             j = 0;
             do{
-                if(index == gameState.all_sectors.get(j).getId()) sector = gameState.all_sectors.get(j);
+                if(index == gameState.allSectors.get(j).getId()) sector = gameState.allSectors.get(j);
                 j++;
             }while(sector == null);
             if(!sectors.contains(sector)){
@@ -118,7 +117,7 @@ public class ResourceHandler {
             id=json.getInt("id");
             duration = json.getInt("duration");
             probability = json.getInt("probability");
-            gameState.all_possible_events.add(new RandomEvent(duration, probability,name,id));
+            gameState.allPossibleEvents.add(new RandomEvent(duration, probability,name,id));
         }
     }
 }

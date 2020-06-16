@@ -4,12 +4,6 @@ import java.util.List;
 public class Tramline {
     public List<Sector> sectors;
     public List<Stop> stops = new ArrayList<>();
-    private final int id;
-
-    /**
-     * @return id which is name of the tramline
-     */
-    public int getId(){ return id; }
 
     /**
      * Create List of Stops based on
@@ -25,12 +19,10 @@ public class Tramline {
 
     /**
      * @param sectors list of sectors Tramline contains
-     * @param id name for this Tramline
      */
 
-    public Tramline(List<Sector> sectors, int id){
+    public Tramline(List<Sector> sectors){
         this.sectors = sectors;
         createStopsList();
-        this.id = id;
     }
 }

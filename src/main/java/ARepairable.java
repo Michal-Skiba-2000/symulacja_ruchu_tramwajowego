@@ -1,14 +1,14 @@
 public abstract class ARepairable {
-    protected RandomEvent random_event;
-    protected int time_to_repair;
-    protected boolean is_active;
+    protected RandomEvent randomEvent;
+    protected int timeToRepair;
+    protected boolean isActive;
 
     public abstract void repair();
     public abstract void assignEvent(RandomEvent event);
 
 
     protected ARepairable(){
-        this.is_active = true;
-        this.time_to_repair = 0;
+        this.isActive = true;
+        this.timeToRepair = 0;
     }
 }

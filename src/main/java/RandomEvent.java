@@ -3,14 +3,6 @@ public class RandomEvent {
     public int id;
     public int duration;
     public double probability;
-/*
-    public void setProbability(int input){
-        this.probability=input;
-    }
-    public void setDuration(int input){
-        this.duration=input;
-    }
-*/
 
     /**
      * Creates new Event

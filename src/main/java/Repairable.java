@@ -5,14 +5,14 @@ public class Repairable extends ARepairable {
      * and set is_active to true if the object is repaired
      */
     public void repair(){
-        if(this.is_active){ return; }
-        if (this.random_event != null ){
-            this.time_to_repair += random_event.duration;
-            this.random_event = null;
+        if(this.isActive){ return; }
+        if (this.randomEvent != null ){
+            this.timeToRepair += randomEvent.duration;
+            this.randomEvent = null;
         }
-        this.time_to_repair -= 1;
-        if (this.time_to_repair == 0){
-            this.is_active = true;
+        this.timeToRepair -= 1;
+        if (this.timeToRepair == 0){
+            this.isActive = true;
         }
     }
 
@@ -21,8 +21,8 @@ public class Repairable extends ARepairable {
      * @param event
      */
     public void assignEvent(RandomEvent event){
-        this.random_event = event;
-        this.is_active = false;
+        this.randomEvent = event;
+        this.isActive = false;
     }
 
     protected  Repairable(){super();}

@@ -1,7 +1,8 @@
 import org.json.JSONException;
-
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
   Main class that handles the simulation
@@ -19,12 +20,12 @@ public class  Simulation{
     private void resolveRandomEvents(){
         double probability=Math.random()*10000;
         int flag=0;
-        for(int j = 0; j< gameState.all_possible_events.size()&&flag==0; j++) {
-            if(probability< gameState.all_possible_events.get(j).probability) {
-                int sector_id=(int) (Math.round(Math.random()*1000)% gameState.all_sectors.size());
-                gameState.all_sectors.get(sector_id).assignEvent(gameState.all_possible_events.get(j));
-                gameState.sectors_to_repair.add(gameState.all_sectors.get(sector_id));
-                statistics.totalNumberOfEvents.add(gameState.all_possible_events.get(j));
+        for(int j = 0; j< gameState.allPossibleEvents.size()&&flag==0; j++) {
+            if(probability< gameState.allPossibleEvents.get(j).probability) {
+                int sector_id=(int) (Math.round(Math.random()*1000)% gameState.allSectors.size());
+                gameState.allSectors.get(sector_id).assignEvent(gameState.allPossibleEvents.get(j));
+                gameState.sectorsToRepair.add(gameState.allSectors.get(sector_id));
+                statistics.totalNumberOfEvents.add(gameState.allPossibleEvents.get(j));
 
                 flag=1;
             }
@@ -48,11 +49,11 @@ public class  Simulation{
             int numberOfPassengers= (int) (Math.round(Math.random() * 1000)) % maxNumberOfPassengers;
 
             for (int i =0;i<numberOfPassengers;i++) {
-                int start = (int) (Math.round(Math.random() * 10000)) % gameState.all_stops.size();
-                Passenger passenger = new Passenger(gameState.all_stops.get(start),gameState);
+                int start = (int) (Math.round(Math.random() * 10000)) % gameState.allStops.size();
+                Passenger passenger = new Passenger(gameState.allStops.get(start),gameState);
                 passenger.spawnTime=LocalTime.of(time.getHour(),time.getMinute());
-                gameState.all_passengers.add(passenger);
-                gameState.all_stops.get(start).passengers_on.add(passenger);
+                gameState.allPassengers.add(passenger);
+                gameState.allStops.get(start).passengersOn.add(passenger);
                 statistics.totalNumberOfPassengers.add(passenger);
             }
         }
@@ -62,8 +63,8 @@ public class  Simulation{
      * Resolve move function on all trams
      */
     private void moveTrams(){
-        for (Tram all_tram : gameState.all_trams) {
-            all_tram.makeMove(time, gameState);
+        for (Tram allTram : gameState.allTrams) {
+            allTram.makeMove(time, gameState);
         }
     }
 
@@ -71,14 +72,12 @@ public class  Simulation{
      * Repair all inactive sectors
      */
     private void repairSectors(){
-        if(gameState.sectors_to_repair != null){
-            Sector sector;
-            for(int i = gameState.sectors_to_repair.size()-1; i >= 0; i--){
-                sector = gameState.sectors_to_repair.get(i);
-                sector.repair();
-                if(sector.is_active){ gameState.sectors_to_repair.remove(i); }
-            }
+        List<Sector> sectorsToRemove = new ArrayList<>();
+        for(Sector sector: gameState.sectorsToRepair){
+            sector.repair();
+            if(sector.isActive){ sectorsToRemove.add(sector); }
         }
+        gameState.sectorsToRepair.removeAll(sectorsToRemove);
     }
 
     /**
@@ -94,10 +93,10 @@ public class  Simulation{
             repairSectors();
             time = time.plusMinutes(1);
         }
-        for(int i=0;i<gameState.all_passengers.size();i++){
-            gameState.all_passengers.get(i).loadTime=time;
+        for(Passenger passenger: gameState.allPassengers){
+            passenger.loadTime=time;
         }
-        statistics.totalNumberOfUnhandled.addAll(gameState.all_passengers);
+        statistics.totalNumberOfUnhandled.addAll(gameState.allPassengers);
     }
 
     /**
